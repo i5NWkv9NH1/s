@@ -1,0 +1,10 @@
+[URL Rewrite]
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics _ reject
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag _ reject
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv _ reject
+
+[Rule]
+DOMAIN-SUFFIX,stat.peopleapp.com,REJECT
+
+[MITM]
+hostname = app.peopleapp.com

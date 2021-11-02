@@ -1,0 +1,27 @@
+payload:
+  # twitch
+  - '+.twitch.tv'
+  - '+.twitch.com'
+  - '+.twitch.net'
+  - '+.jtvnw.net'
+  - '+.ttvnw.net'
+  - '+.twitchcdn.net'
+  # videos
+  - '+.xvideos.com'
+  - '+.xvideos-cdn.com'
+  # hanime1
+  - '+.hanime1.me'
+  - '+.sb-cd.com'
+  # spankbang
+  - '+.spankbang'
+  # spotify
+  - '+.pscdn.co'
+  - '+.scdn.co'
+  - '+.spoti.fi'
+  - '+.spotify.com'
+  - '+.spotifycdn.com'
+  - '+.spotifycdn.net'
+  - '+.spotifycharts.com'
+  - '+.spotifycodes.com'
+  - '+.spotifyjobs.com'
+  - '+.spotilocal.com'

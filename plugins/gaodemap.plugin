@@ -1,0 +1,10 @@
+[URL Rewrite]
+^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main\-page\? _ reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/rdr\/log\/upload\? _ reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/alc\/collect\? _ reject
+
+[Rule]
+DOMAIN-SUFFIX,optimus-ads.amap,REJECT
+
+[MITM]
+hostname = *.m5.amap.com, *.sns.amap.com

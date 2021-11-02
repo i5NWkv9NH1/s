@@ -1,0 +1,486 @@
+# 2021-11-03 12:30 UTC+9
+port: 7890
+socks-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: "127.0.0.1:9090"
+experimental:
+  ignore-resolve-fail: true
+dns:
+  enable: true
+  enhanced-mode: redir-host
+  nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 119.29.29.29
+    - 223.5.5.5
+    - 1.1.1.1
+tun:
+  enable: true
+  ipv6: false
+  stack: gvisor
+  dns-hijack:
+    - 198.18.0.2:53
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+
+proxies:
+
+proxy-groups:
+  - {
+      name: "香港 🇭🇰",
+      type: select,
+      proxies:
+        [
+          "🇭🇰 ①香港 | HKG x1.0{艾可云}",
+          "🇭🇰 ②香港 | HKG x1.0{艾可云}",
+          "🇭🇰 ③香港 | HKG x1.0{艾可云}",
+          "🇭🇰 ④香港 | HKG x1.0{艾可云}",
+          "🇭🇰 ⑤香港 | HKG x1.0{艾可云}",
+          "🇭🇰 ⑥香港 | HKG [解锁] x1.2{艾可云}",
+          "🇭🇰 ⑦香港 | HKG [解锁] x1.2{艾可云}",
+          "🇭🇰 ⑧香港 | HKG [解锁] x1.2{艾可云}",
+        ],
+    }
+  - {
+      name: "日本 🇯🇵",
+      type: select,
+      proxies:
+        [
+          "🇯🇵 ①日本 | JPN x1.0{艾可云}",
+          "🇯🇵 ②日本 | JPN x1.0{艾可云}",
+          "🇯🇵 ③日本 | JPN x1.0{艾可云}",
+          "🇯🇵 ④日本 | JPN [解锁] x1.2{艾可云}",
+          "🇯🇵 ⑤日本 | JPN [解锁] x1.2{艾可云}",
+        ],
+    }
+  - {
+      name: "韩国 🇰🇷",
+      type: select,
+      proxies: ["🇰🇷 ①韩国 | KOR x1.0{艾可云}", "🇰🇷 ②韩国 | KOR x1.0{艾可云}"],
+    }
+  - {
+      name: "台湾 🇹🇼",
+      type: select,
+      proxies:
+        [
+          "🇹🇼 ①台湾 | TWN [解锁] x1.2{艾可云}",
+          "🇹🇼 ②台湾 | TWN [解锁] x1.2{艾可云}",
+        ],
+    }
+  - {
+      name: "新加坡 🇸🇬",
+      type: select,
+      proxies:
+        [
+          "🇸🇬 ①新加坡 | SGP x1.0{艾可云}",
+          "🇸🇬 ②新加坡 | SGP x1.0{艾可云}",
+          "🇸🇬 ③新加坡 | SGP [解锁] x1.2{艾可云}",
+          "🇸🇬 ④新加坡 | SGP [解锁] x1.2{艾可云}",
+        ],
+    }
+  - {
+      name: "美国 🇺🇸",
+      type: select,
+      proxies:
+        [
+          "🇺🇸 ①美国 | USA x1.0{艾可云}",
+          "🇺🇸 ②美国 | USA x1.0{艾可云}",
+          "🇺🇸 ③美国 | USA [解锁] x1.2{艾可云}",
+          "🇺🇸 ④美国 | USA [解锁] x1.2{艾可云}",
+        ],
+    }
+  - {
+      name: "其他",
+      type: select,
+      proxies:
+        [
+          "🇻🇳 ①越南 | VNM [解锁] x1.2{艾可云}",
+          "🇮🇳 ①印度 | IND x1.0{艾可云}",
+          "🇷🇺 ①俄罗斯 | RUS x1.0{艾可云}",
+          "🇬🇧 ①英国 | GBR x1.0{艾可云}",
+          "🇳🇱 ①荷兰 | NLD x1.0{艾可云}",
+          "🇩🇪 ①德国 | DEU x1.0{艾可云}",
+        ],
+    }
+  - {
+      name: "游戏",
+      type: select,
+      proxies:
+        [
+          "🇭🇰🎮 ①广港游戏专用(限速2Mb) x15.0",
+          "🇭🇰🎮 ②广港游戏专用(限速2Mb) x15.0",
+        ],
+    }
+
+  - {
+      name: "Default",
+      type: select,
+      proxies:
+        [
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+          "游戏",
+        ],
+    }
+  - {
+      name: "Telegram",
+      type: select,
+      proxies:
+        [
+          "Default",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Google",
+      type: select,
+      proxies:
+        [
+          "Default",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Youtube",
+      type: select,
+      proxies:
+        [
+          "Default",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Stream",
+      type: select,
+      proxies:
+        [
+          "Default",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Social",
+      type: select,
+      proxies:
+        [
+          "Default",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Cloud",
+      type: select,
+      proxies:
+        [
+          "DIRECT",
+          "Default",
+          "REJECT",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Firefox",
+      type: select,
+      proxies:
+        [
+          "DIRECT",
+          "Default",
+          "REJECT",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Microsoft",
+      type: select,
+      proxies:
+        [
+          "DIRECT",
+          "Default",
+          "REJECT",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "iCloud",
+      type: select,
+      proxies:
+        [
+          "DIRECT",
+          "Default",
+          "REJECT",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+  - {
+      name: "Apple",
+      type: select,
+      proxies:
+        [
+          "DIRECT",
+          "Default",
+          "REJECT",
+          "香港 🇭🇰",
+          "韩国 🇰🇷",
+          "日本 🇯🇵",
+          "台湾 🇹🇼",
+          "新加坡 🇸🇬",
+          "美国 🇺🇸",
+          "其他",
+        ],
+    }
+
+rule-providers:
+  BanAD:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml
+    behavior: classical
+    path: ./ruleset/BanAD.yaml
+    interval: 43200
+  BanEasyList:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanEasyList.yaml
+    behavior: classical
+    path: ./ruleset/BanEasyList.yaml
+    interval: 43200
+  BanEasyListChina:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanEasyListChina.yaml
+    behavior: classical
+    path: ./ruleset/BanEasyListChina.yaml
+    interval: 43200
+  BanEasyPrivacy:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanEasyPrivacy.yaml
+    behavior: classical
+    path: ./ruleset/BanEasyPrivacy.yaml
+    interval: 43200
+  BanProgramAD:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanProgramAD.yaml
+    behavior: classical
+    path: ./ruleset/BanProgramAD.yaml
+    interval: 43200
+  reject-anudeepND:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/reject-anudeepND.yaml
+    behavior: domain
+    path: ./ruleset/reject-anudeepND.yaml
+    interval: 43200
+  reject-BlackJack8:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/reject-BlackJack8.yaml
+    behavior: domain
+    path: ./ruleset/reject-BlackJack8.yaml
+    interval: 43200
+  reject-keyword:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/reject-keyword.yaml
+    behavior: classical
+    path: ./ruleset/reject-keyword.yaml
+    interval: 43200
+  reject-loyalsoldier:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    behavior: domain
+    path: ./ruleset/reject-loyalsoldier.yaml
+    interval: 43200
+  reject:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/reject.yaml
+    behavior: domain
+    path: ./ruleset/reject.yaml
+    interval: 43200
+  proxy:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/proxy.yaml
+    behavior: domain
+    path: ./ruleset/proxy-jannarin.yaml
+    interval: 43200
+  firefox:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/firefox.yaml
+    behavior: domain
+    path: ./ruleset/firefox.yaml
+    interval: 43200
+  opera:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/opera.yaml
+    behavior: domain
+    path: ./ruleset/opera.yaml
+    interval: 43200
+  youtube:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/youtube.yaml
+    behavior: domain
+    path: ./ruleset/youtube.yaml
+    interval: 43200
+  google:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/google.yaml
+    behavior: domain
+    path: ./ruleset/google.yaml
+    interval: 43200
+  global-tv:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/global-tv.yaml
+    behavior: domain
+    path: ./ruleset/global-tv.yaml
+    interval: 43200
+  telegram:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/telegram.yaml
+    behavior: domain
+    path: ./ruleset/telegram.yaml
+    interval: 43200
+  telegram-ip:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/telegram-ip.yaml
+    behavior: ipcidr
+    path: ./ruleset/telegram-ip.yaml
+    interval: 43200
+  microsoft:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/microsoft.yaml
+    behavior: domain
+    path: ./ruleset/microsoft.yaml
+    interval: 43200
+  stream:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/stream.yaml
+    behavior: domain
+    path: ./ruleset/stream.yaml
+    interval: 43200
+  social:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/social.yaml
+    behavior: domain
+    path: ./ruleset/social.yaml
+    interval: 43200
+  cloud:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/sorachandesu/s@t/rules/yaml/cloud.yaml
+    behavior: domain
+    path: ./ruleset/cloud.yaml
+    interval: 43200
+  gfw:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/gfw.txt
+    behavior: domain
+    path: ./ruleset/gfw.yaml
+    interval: 43200
+  private:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/private.txt
+    behavior: domain
+    path: ./ruleset/private-loyalsoldier.yaml
+    interval: 43200
+  cncidr:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/cncidr.txt
+    behavior: ipcidr
+    path: ./ruleset/cncidr.yaml
+    interval: 43200
+  lancidr:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/lancidr.txt
+    behavior: ipcidr
+    path: ./ruleset/lancidr.yaml
+    interval: 43200
+  apple:
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/apple.txt
+    behavior: domain
+    path: ./ruleset/apple.yaml
+    interval: 43200
+
+rules:
+  - RULE-SET,BanAD,REJECT
+  - RULE-SET,BanEasyList,REJECT
+  - RULE-SET,BanEasyListChina,REJECT
+  - RULE-SET,BanEasyPrivacy,REJECT
+  - RULE-SET,BanProgramAD,REJECT
+  - RULE-SET,reject-anudeepND,REJECT
+  - RULE-SET,reject-BlackJack8,REJECT
+  - RULE-SET,reject-keyword,REJECT
+  - RULE-SET,reject-loyalsoldier,REJECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,proxy,Default
+  - RULE-SET,firefox,Firefox
+  - RULE-SET,telegram,Telegram
+  - RULE-SET,telegram-ip,Telegram
+  - RULE-SET,youtube,Youtube
+  - RULE-SET,stream,Stream
+  - RULE-SET,social,Social
+  - RULE-SET,google,Google
+  - RULE-SET,microsoft,Microsoft
+  - RULE-SET,cloud,Cloud
+  - RULE-SET,global-tv,Stream
+  - RULE-SET,apple,Apple
+  - RULE-SET,gfw,Default
+  - RULE-SET,private,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - GEOIP,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Default

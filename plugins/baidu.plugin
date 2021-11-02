@@ -1,0 +1,14 @@
+[URL Rewrite]
+^https?://[^/]+/rewardappmsgreport(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/gs.gif?(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/\d{1}/logservice/(service|attach)(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/c/f/form/getAdInfo(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/c/s/splashSchedule(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/baidu.php(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/c/s/inpv(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/c/s/sync(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/c/s/newlog(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/c/s/pv(?:/?|/?#.*)$ _ reject
+
+[MITM]
+*.baidu.com
