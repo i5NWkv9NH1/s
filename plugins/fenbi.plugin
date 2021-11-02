@@ -1,8 +1,0 @@
-[URL Rewrite]
-http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* _ reject
-^https?:\/\/tiku\.fenbi\.com\/iphone\/xingce\/launcher\/v\d{1}\? _ reject
-
-[Rule]
-DOMAIN-SUFFIX,data-api.fenbi.com,REJECT
-[MITM]
-hostname = *.fenbi.com

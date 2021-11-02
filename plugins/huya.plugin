@@ -1,4 +1,0 @@
-[Rule]
-DOMAIN-SUFFIX,udblog.huya.com,REJECT
-DOMAIN-SUFFIX,ffilelogapp.huya.com,REJECT
-DOMAIN-SUFFIX,report.qqweb.qq.com,REJECT

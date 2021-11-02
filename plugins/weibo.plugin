@@ -1,8 +1,0 @@
-[URL Rewrite]
-^https?://[^/]+/2/logservice/(service|attach)(?:/?|/?#.*)$, _ reject
-
-[Rule]
-
-
-[MITM]
-hostname = *.api.weibo.cn.com

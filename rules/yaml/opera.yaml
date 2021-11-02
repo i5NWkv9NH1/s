@@ -1,9 +1,0 @@
-payload:
-  - '+.oauth2.opera-api.com'
-  - '+.weather.opera-api.com'
-  - '+.features.opera-api.com'
-  - '+.autoupdate.geo.opera.com'
-  - '+.sitecheck.opera.com'
-  - '+.speeddials.opera.com'
-  - '+.sync.opera.com'
-  - '+.geo.opera.com'
