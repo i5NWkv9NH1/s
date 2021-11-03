@@ -425,31 +425,31 @@ rule-providers:
     interval: 43200
   gfw:
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/gfw.txt
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
     behavior: domain
     path: ./ruleset/gfw.yaml
     interval: 43200
   private:
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/private.txt
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
     behavior: domain
     path: ./ruleset/private-loyalsoldier.yaml
     interval: 43200
   cncidr:
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/cncidr.txt
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
     behavior: ipcidr
     path: ./ruleset/cncidr.yaml
     interval: 43200
   lancidr:
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/lancidr.txt
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
     behavior: ipcidr
     path: ./ruleset/lancidr.yaml
     interval: 43200
   apple:
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/ruleset/apple.txt
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
     behavior: domain
     path: ./ruleset/apple.yaml
     interval: 43200
