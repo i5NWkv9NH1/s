@@ -37,7 +37,6 @@ proxy-groups:
   - { name: '美国 🇺🇸', type: select, proxies: ['🇺🇸 ①美国 | USA x1.0{艾可云}', '🇺🇸 ②美国 | USA x1.0{艾可云}', '🇺🇸 ③美国 | USA [解锁] x1.2{艾可云}', '🇺🇸 ④美国 | USA [解锁] x1.2{艾可云}'] }
   - { name: '其他', type: select, proxies: ['🇻🇳 ①越南 | VNM [解锁] x1.2{艾可云}', '🇮🇳 ①印度 | IND x1.0{艾可云}', '🇷🇺 ①俄罗斯 | RUS x1.0{艾可云}', '🇬🇧 ①英国 | GBR x1.0{艾可云}', '🇳🇱 ①荷兰 | NLD x1.0{艾可云}', '🇩🇪 ①德国 | DEU x1.0{艾可云}']}
   - { name: '游戏', type: select, proxies: ['🇭🇰🎮 ①广港游戏专用(限速2Mb) x15.0', '🇭🇰🎮 ②广港游戏专用(限速2Mb) x15.0']}
-
   - { name: 'Default', type: select, proxies: ['香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
   - { name: 'Telegram', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
   - { name: 'Google', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
