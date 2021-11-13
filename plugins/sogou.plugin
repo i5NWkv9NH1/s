@@ -2,6 +2,8 @@
 ^https?:\/\/pb\.sogou\.com\/pv\.gif\? reject
 ^https?:\/\/fanyiapp\.sogou\.com\/translateServer\/translate\/downloadSplashScreen reject
 ^https?:\/\/fanyiapp\.sogou\.com\/translateServer\/translate\/checkSplashScreenState reject
+
 [Rule]
+
 [MITM]
 hostname = *.sogou.com,fanyiapp.sogou.com
