@@ -15,25 +15,25 @@ DOMAIN-SUFFIX,data.bilibili.com,REJECT
 DOMAIN-SUFFIX,grpc.biliapi.net,REJECT
 
 [URL Rewrite]
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/splash\/list\? _ reject
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/push\/report _ reject
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/report _ reject
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/report\/* _ reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/splash\/list\? reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/push\/report reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/report reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/report\/* reject
 
-# ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/share\/* _ reject
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/share\/guide\? _ reject
+# ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/share\/* reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/share\/guide\? reject
 
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/dataflow\/report _ reject
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/report _ reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/dataflow\/report reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/report reject
 
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/resource\/abtest\/*? _ reject
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/version\/testflight\? _ reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/resource\/abtest\/*? reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/version\/testflight\? reject
 
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/version\/fawkes\/upgrade\/ios\? _ reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/version\/fawkes\/upgrade\/ios\? reject
 
-^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/search\/defaultwords\? _ reject
+^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/search\/defaultwords\? reject
 
-^https?:\/\/miniapp\.bilibili.com\/api\/miniapp\/report\/* _ reject
+^https?:\/\/miniapp\.bilibili.com\/api\/miniapp\/report\/* reject
 
 [MITM]
 hostname = ap?.bilibili.com,message.bilibili.com, miniapp.bilibili.com

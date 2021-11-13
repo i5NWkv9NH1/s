@@ -1,14 +1,14 @@
 [URL Rewrite]
-^https?://[^/]+/rewardappmsgreport(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/gs.gif?(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/\d{1}/logservice/(service|attach)(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/c/f/form/getAdInfo(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/c/s/splashSchedule(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/baidu.php(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/c/s/inpv(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/c/s/sync(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/c/s/newlog(?:/?|/?#.*)$ _ reject
-^https?://[^/]+/c/s/pv(?:/?|/?#.*)$ _ reject
+^https?://[^/]+/rewardappmsgreport(?:/?|/?#.*)$ reject
+^https?://[^/]+/gs.gif?(?:/?|/?#.*)$ reject
+^https?://[^/]+/\d{1}/logservice/(service|attach)(?:/?|/?#.*)$ reject
+^https?://[^/]+/c/f/form/getAdInfo(?:/?|/?#.*)$ reject
+^https?://[^/]+/c/s/splashSchedule(?:/?|/?#.*)$ reject
+^https?://[^/]+/baidu.php(?:/?|/?#.*)$ reject
+^https?://[^/]+/c/s/inpv(?:/?|/?#.*)$ reject
+^https?://[^/]+/c/s/sync(?:/?|/?#.*)$ reject
+^https?://[^/]+/c/s/newlog(?:/?|/?#.*)$ reject
+^https?://[^/]+/c/s/pv(?:/?|/?#.*)$ reject
 
 [MITM]
 *.baidu.com

@@ -1,14 +1,14 @@
 [URL Rewrite]
-^https?:\/\/api\.zhihu\.com\/commercial\_api\/real\_time\_launch\_v\d{1}\? _ reject
-^https?:\/\/api\.zhihu\.com\/commercial\_api\/app\_float\_layer _ reject
-^https?:\/\/api\.zhihu\.com\/commercial\_api\/real\_time\_second\_floor\_v\d{1}\? _ reject
-^https?:\/\/api\.zhihu\.com\/ad\-style\-service _ reject
+^https?:\/\/api\.zhihu\.com\/commercial\_api\/real\_time\_launch\_v\d{1}\? reject
+^https?:\/\/api\.zhihu\.com\/commercial\_api\/app\_float\_layer reject
+^https?:\/\/api\.zhihu\.com\/commercial\_api\/real\_time\_second\_floor\_v\d{1}\? reject
+^https?:\/\/api\.zhihu\.com\/ad\-style\-service reject
 
-^https?:\/\/api\.zhihu\.com\/zst\/events\/p _ reject
-^https?:\/\/m\-cloud\.zhihu\.com\/api\/log\/* _ reject
-^https?:\/\/api\.zhihu\.com\/log\_collect\/analysis _ reject
+^https?:\/\/api\.zhihu\.com\/zst\/events\/p reject
+^https?:\/\/m\-cloud\.zhihu\.com\/api\/log\/* reject
+^https?:\/\/api\.zhihu\.com\/log\_collect\/analysis reject
 
-^https?:\/\/api\.zhihu\.com\/ab\/* _ reject
+^https?:\/\/api\.zhihu\.com\/ab\/* reject
 [Rule]
 DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com,REJECT
 DOMAIN-SUFFIX,sugar.zhihu.com,REJECT

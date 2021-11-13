@@ -1,8 +1,8 @@
 [URL Rewrite]
-^https?:\/\/capis\.didapinche\.com\/ad\/* _ reject
-^https?:\/\/capis\.didapinche\.com\/carpool\/base\/passenger\/home\/info\/new\? _ reject
-^https?:\/\/capis\.didapinche\.com\/adbase\/deliver\? _ reject
-^https?:\/\/capis\.didapinche\.com\/app\/adstat\? _ reject
+^https?:\/\/capis\.didapinche\.com\/ad\/* reject
+^https?:\/\/capis\.didapinche\.com\/carpool\/base\/passenger\/home\/info\/new\? reject
+^https?:\/\/capis\.didapinche\.com\/adbase\/deliver\? reject
+^https?:\/\/capis\.didapinche\.com\/app\/adstat\? reject
 
 
 [Rule]
