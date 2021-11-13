@@ -13,10 +13,8 @@
 ^https?:\/\/youtubei.googleapis.com\/.+ad_break reject
 ^https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log) reject
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat reject
-
-
+^https?:\/\/play\.google\.com\/log\? reject
 [Script]
 
-
 [MITM]
-hostname = *.googlevideo.com
+hostname = *.play.google.com, *.googlevideo.com

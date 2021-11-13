@@ -5,4 +5,4 @@ http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* reject
 [Rule]
 DOMAIN-SUFFIX,data-api.fenbi.com,REJECT
 [MITM]
-hostname = *.fenbi.com
+hostname = *.fenbi.com,*.fbstatic.cn
