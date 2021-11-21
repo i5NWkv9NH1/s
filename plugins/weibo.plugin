@@ -1,5 +1,5 @@
 [URL Rewrite]
-^https?://[^/]+/2/logservice/(service|attach)(?:/?|/?#.*)$, reject
+^https?://[^/]+/2/logservice/(service|attach)(?:/?|/?#.*)$ - reject
 
 [Rule]
 

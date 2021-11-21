@@ -1,7 +1,7 @@
 [URL Rewrite]
-^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main\-page\? reject
-^https?:\/\/m5\.amap\.com\/ws\/shield\/rdr\/log\/upload\? reject
-^https?:\/\/m5\.amap\.com\/ws\/shield\/alc\/collect\? reject
+^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main\-page\? - reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/rdr\/log\/upload\? - reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/alc\/collect\? - reject
 
 [Rule]
 DOMAIN-SUFFIX,optimus-ads.amap,REJECT

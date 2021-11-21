@@ -1,6 +1,6 @@
 [URL Rewrite]
-http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* reject
-^https?:\/\/tiku\.fenbi\.com\/iphone\/xingce\/launcher\/v\d{1}\? reject
+http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* - reject
+^https?:\/\/tiku\.fenbi\.com\/iphone\/xingce\/launcher\/v\d{1}\? - reject
 
 [Rule]
 DOMAIN-SUFFIX,data-api.fenbi.com,REJECT

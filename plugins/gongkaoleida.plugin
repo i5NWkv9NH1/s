@@ -1,6 +1,6 @@
 [URL Rewrite]
-^https?:\/\/183.232.25.151\/v\d{1}\/report reject
-^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\/ad\/info\? reject
+^https?:\/\/183.232.25.151\/v\d{1}\/report - reject
+^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\/ad\/info\? - reject
 
 [MITM]
 183.232.25.151

@@ -1,7 +1,7 @@
 # 必胜公考
 [URL Rewrite]
-^https?:\/\/api\.platform\.winlesson\.com\/stat\_api\/open\_app\? reject
-^https?:\/\/api\.platform\.winlesson\.com\/home\/popup\? reject
+^https?:\/\/api\.platform\.winlesson\.com\/stat\_api\/open\_app\? - reject
+^https?:\/\/api\.platform\.winlesson\.com\/home\/popup\? - reject
 
 [Rule]
 DOMAIN-SUFFIX,stat.api.platform.winlesson.com

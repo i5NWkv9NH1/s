@@ -1,19 +1,19 @@
 [URL Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) reject
-^https?:\/\/www\.youtube\.com\/youtubei\/v\d{1}\/log\_event\? reject
-^https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost reject
-^https?:\/\/.+.youtube.com\/api\/stats\/ads reject
-^https?:\/\/.+.youtube.com\/get_midroll_ reject
-^https?:\/\/.+.youtube.com\/pagead\/ reject
-^https?:\/\/.+.youtube.com\/ptracking\? reject
-^https?:\/\/.+.youtube.com\/_get_ads reject
-^https?:\/\/premiumyva.appspot.com\/vmclickstoadvertisersite reject
-^https?:\/\/s0.2mdn.net\/ads\/ reject
-^https?:\/\/stats.tubemogul.com\/stats\/ reject
-^https?:\/\/youtubei.googleapis.com\/.+ad_break reject
-^https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log) reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat reject
-^https?:\/\/play\.google\.com\/log\? reject
+^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) - reject
+^https?:\/\/www\.youtube\.com\/youtubei\/v\d{1}\/log\_event\? - reject
+^https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost - reject
+^https?:\/\/.+.youtube.com\/api\/stats\/ads - reject
+^https?:\/\/.+.youtube.com\/get_midroll_ - reject
+^https?:\/\/.+.youtube.com\/pagead\/ - reject
+^https?:\/\/.+.youtube.com\/ptracking\? - reject
+^https?:\/\/.+.youtube.com\/_get_ads - reject
+^https?:\/\/premiumyva.appspot.com\/vmclickstoadvertisersite - reject
+^https?:\/\/s0.2mdn.net\/ads\/ - reject
+^https?:\/\/stats.tubemogul.com\/stats\/ - reject
+^https?:\/\/youtubei.googleapis.com\/.+ad_break - reject
+^https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log) - reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat - reject
+^https?:\/\/play\.google\.com\/log\? - reject
 [Script]
 
 [MITM]

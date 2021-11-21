@@ -1,7 +1,7 @@
 [URL Rewrite]
-^https?:\/\/pb\.sogou\.com\/pv\.gif\? reject
-^https?:\/\/fanyiapp\.sogou\.com\/translateServer\/translate\/downloadSplashScreen reject
-^https?:\/\/fanyiapp\.sogou\.com\/translateServer\/translate\/checkSplashScreenState reject
+^https?:\/\/pb\.sogou\.com\/pv\.gif\? - reject
+^https?:\/\/fanyiapp\.sogou\.com\/translateServer\/translate\/downloadSplashScreen - reject
+^https?:\/\/fanyiapp\.sogou\.com\/translateServer\/translate\/checkSplashScreenState - reject
 
 [Rule]
 

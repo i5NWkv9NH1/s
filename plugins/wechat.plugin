@@ -1,19 +1,19 @@
 [URL Rewrite]
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/repor* - reject
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsg\_video\_snap\? - reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/copyright* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsgrep* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/web* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/jsmonitor* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/timereport* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsgpicreport* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/relatedarticle* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/wapcommreport* reject
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/jsrep* reject
-^https?:\/\/mp\.weixin\.qq\.com\/bizmall\/re* reject
-^https?:\/\/mp\.weixin\.qq\.com\/tp\/datareport/report reject
-^https?:\/\/open\.weixin\.qq\.com\/sdk\/report? reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/copyright* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsgrep* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/web* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/jsmonitor* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/timereport* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsgpicreport* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/relatedarticle* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/wapcommreport* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/jsrep* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/bizmall\/re* - reject
+^https?:\/\/mp\.weixin\.qq\.com\/tp\/datareport/report - reject
+^https?:\/\/open\.weixin\.qq\.com\/sdk\/report? - reject
 
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT

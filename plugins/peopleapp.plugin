@@ -1,7 +1,7 @@
 [URL Rewrite]
-^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics reject
-^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag reject
-^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv reject
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics - reject
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag - reject
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv - reject
 
 [Rule]
 DOMAIN-SUFFIX,stat.peopleapp.com,REJECT

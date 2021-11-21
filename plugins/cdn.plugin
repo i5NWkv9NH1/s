@@ -1,5 +1,5 @@
 [URL Rewrite]
-^https?:\/\/cdn\.ampproject\.org\/preconnect\.gif\? reject
+^https?:\/\/cdn\.ampproject\.org\/preconnect\.gif\? - reject
 
 [MITM]
 hostname = cdn.ampproject.com
