@@ -1,0 +1,11 @@
+# 华尔街见闻
+[URL Rewrite]
+^https?:\/\/api\-one\.wallstcn\.com\/apiv\d{1}\/advertising\/ads\? - reject
+^https?:\/\/api\.growingio\.com\/v\d{1}\/*\/ios\? - reject
+^https?:\/\/eco\.taobao\.com\/router\/rest - reject
+
+[Rule]
+DOMAIN-SUFFIX,dashuju-wscn.xuangubao.cn,REJECT
+
+[MITM]
+hostname = *.wallstcn.com,api.growingio.com,eco.taobao.com

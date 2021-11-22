@@ -1,0 +1,15 @@
+[URL Rewrite]
+
+[Rule]
+DOMAIN-SUFFIX,cmtw.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,cmta.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,th.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,tp.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,titan.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,manortk.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,t-dsp.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,at.pingduoduo.com,REJECT
+DOMAIN-SUFFIX,lp.pingduoduo.com,REJECT
+
+[MITM]
+
