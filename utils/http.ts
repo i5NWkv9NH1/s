@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import axios, { AxiosError } from 'axios'
 
 const PLUGINS_SOURCE_DIR = resolve(process.cwd(), 'plugins/');
-const plugins = ['baidu', 'bilibili', 'bishenggongkao', 'cdn', 'didapinche', 'fenbi', 'gaodemap', 'gongkaoleida', 'google', 'hupu', 'huya', 'peopleapp', 'pptv', 'sogou', 'wallsstcn', 'wechat', 'weibo', 'xinhuanews', 'zhihu'];
+const plugins = ['baidu', 'bilibili', 'bishenggongkao', 'cdn', 'didapinche', 'fenbi', 'gaodemap', 'gongkaoleida', 'google', 'hupu', 'huya', 'peopleapp', 'pinduoduo', 'pptv', 'sogou', 'wallsstcn', 'wechat', 'weibo', 'xinhuanews', 'zhihu'];
 
 type Action = 'cdn' | 'purge'
 
