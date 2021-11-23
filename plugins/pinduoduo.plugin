@@ -1,6 +1,7 @@
 [URL Rewrite]
 
 [Rule]
+DOMAIN-SUFFIX,pmmtk.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,cmtw.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,cmta.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,th.pinduoduo.com,REJECT
