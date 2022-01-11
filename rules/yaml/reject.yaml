@@ -159,7 +159,6 @@ payload:
   - '+.sdkapp.uve.weibo.com'
   - '+.mjs.sinaimg.cn'
   - '+.pluto.sina.cn'
-  - '+.interface.sina.cn'
   - '+.gk.sina.cn'
   - '+.cmnt.sina.cn'
   - '+.log2.sina.cn'
@@ -581,3 +580,5 @@ payload:
   - '+.kme.duoquwawa.cn'
   - '+.cheka.biz.weibo.com'
   - '+.ad.qlfree.com'
+  - '+.qqq123987.site'
+  - '+.777.qweewq2021.online'
