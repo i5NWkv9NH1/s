@@ -1,18 +1,16 @@
 [Script]
-http-response ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js,enabled=true, tag=bilibili-dynamic
+http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=bili-proto
 
-http-response ^https://app\.bilibili\.com/x/resource/show/tab(/v2)?\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_tab.js,enabled=true, tag=bilibili-tab
+http-response ^https://app\.bilibili\.com/x/resource/show/tab(/v2)?\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/tab.js,enabled=true, tag=bilibili-tab
 
-http-response ^https://app\.bilibili\.com/x/v2/feed/index\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_feed.js,enabled=true, tag=bilibili-feed
+http-response ^https://app\.bilibili\.com/x/v2/feed/index\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/feed.js,enabled=true, tag=bilibili-feed
 
-http-response ^https://app\.bilibili\.com/x/v2/account/mine\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_mine.js,enabled=true, tag=bilibili-mine
-
+http-response ^https://app\.bilibili\.com/x/v2/account/mine\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/mine.js,enabled=true, tag=bilibili-mine
 
 [Rule]
-DOMAIN-SUFFIX,dataflow.biliapi.com,REJECT
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
+DOMAIN-SUFFIX,dataflow.biliapi.com,REJECT
 DOMAIN-SUFFIX,data.bilibili.com,REJECT
-DOMAIN-SUFFIX,grpc.biliapi.net,REJECT
 
 [URL Rewrite]
 ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/splash\/list\? - reject
@@ -36,4 +34,4 @@ DOMAIN-SUFFIX,grpc.biliapi.net,REJECT
 ^https?:\/\/miniapp\.bilibili.com\/api\/miniapp\/report\/* - reject
 
 [MITM]
-hostname = ap?.bilibili.com,message.bilibili.com, miniapp.bilibili.com
+hostname = ap?.bilibili.com,miniapp.bilibili.com,grpc.biliapi.net
