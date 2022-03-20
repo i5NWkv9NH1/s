@@ -1,4 +1,13 @@
 let body = JSON.parse($response.body);
+
+body['data']['bcoin'] = 829
+body['data']['coin'] = 1982
+body['data']['level'] = 6
+body['data']['vip']['type'] = 2
+body['data']['vip']['vip_pay_type'] = 1
+body['data']['vip']['status'] = 1
+body['data']['vip']['due_date'] = 1669824160
+
 // 删除了“推荐服务”
 body['data']['sections_v2'] = [
     {
