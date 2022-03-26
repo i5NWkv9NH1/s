@@ -7,6 +7,7 @@ body['data']['vip']['type'] = 2
 body['data']['vip']['vip_pay_type'] = 1
 body['data']['vip']['status'] = 1
 body['data']['vip']['due_date'] = 1669824160
+body['data']['vip_type'] = 2
 
 // 删除了“推荐服务”
 body['data']['sections_v2'] = [

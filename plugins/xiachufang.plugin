@@ -2,7 +2,7 @@
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/homepage1810\/init_page.json? _ reject
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/* _ reject
 
-[Scripts]
+[Script]
 
 [Rule]
 

@@ -17,6 +17,7 @@ DOMAIN-SUFFIX,data.bilibili.com,REJECT
 ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/push\/report - reject
 ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/report - reject
 ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/report\/* - reject
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/open-interface\/v\d{1}\/app\_abtest? - reject
 
 # ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/share\/* - reject
 ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/share\/guide\? - reject

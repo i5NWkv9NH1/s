@@ -3,7 +3,7 @@
 ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag - reject
 ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv - reject
 
-[Scripts]
+[Script]
 http-response ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp.js, requires-body=true, timeout=10, tag=peopleapp-ad
 
 [Rule]
