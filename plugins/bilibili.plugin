@@ -7,6 +7,8 @@ http-response ^https://app\.bilibili\.com/x/v2/feed/index\?actionKey requires-bo
 
 http-response ^https://app\.bilibili\.com/x/v2/account/mine\?actionKey requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/mine.js,enabled=true, tag=bilibili-mine
 
+http-request ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/BiLiBiLiBVIPCrack.js,enabled=true, tag=bilibili-vip
+
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 DOMAIN-SUFFIX,dataflow.biliapi.com,REJECT
@@ -35,4 +37,4 @@ DOMAIN-SUFFIX,data.bilibili.com,REJECT
 ^https?:\/\/miniapp\.bilibili.com\/api\/miniapp\/report\/* - reject
 
 [MITM]
-hostname = ap?.bilibili.com,miniapp.bilibili.com,grpc.biliapi.net
+hostname = ap?.bilibili.com,miniapp.bilibili.com,grpc.biliapi.net,*.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66, 240e:b1:9801:206:11:0:0:*

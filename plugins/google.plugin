@@ -17,7 +17,10 @@
 ^https?:\/\/s0.2mdn.net\/ads\/ - reject
 ^https?:\/\/premiumyva.appspot.com\/vmclickstoadvertisersite - reject
 ^https?:\/\/play\.google\.com\/log\? - reject
+
 [Script]
+http-response ^https:\/\/www.youtube.com\/api\/timedtext.+ response-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js, enabled=true, tag=youtube-dualsub
+http-request ^https:\/\/setting.youtube.com\/\?action=(g|s)et requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js, enabled=true, tag=youtube-dualsub-setting
 
 [MITM]
-hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,*.play.google.com,
+hostname = -redirector*.googlevideo.com,*.googlevideo.com,*.youtube.com,*.play.google.com
