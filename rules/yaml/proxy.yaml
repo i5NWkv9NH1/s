@@ -1,12 +1,12 @@
 payload:
-  - '+.utorrent.com'
-  - '+.kcc963.com'
-  - '+.yn523.com'
-  - '+.zoomeye.org'
-  - '+.telnet404.com'
-  - '+.nosec.com'
-  - '+.fofa.so'
-  - '+.avgigi.com'
-  - '+.fvf889.com'
-  - '+.picrew.me'
-  - '+.cdn.kuaidi100.com'
+  - "+.utorrent.com"
+  - "+.kcc963.com"
+  - "+.yn523.com"
+  - "+.zoomeye.org"
+  - "+.telnet404.com"
+  - "+.nosec.com"
+  - "+.fofa.so"
+  - "+.avgigi.com"
+  - "+.fvf889.com"
+  - "+.picrew.me"
+  - "+.cdn.kuaidi100.com"

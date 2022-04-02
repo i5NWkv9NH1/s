@@ -1,5 +1,5 @@
 payload:
-  - '+.mozilla.org'
-  - '+.mozilla.net'
-  - '+.mozilla.com'
-  - '+.firefox.com'
+  - "+.mozilla.org"
+  - "+.mozilla.net"
+  - "+.mozilla.com"
+  - "+.firefox.com"
