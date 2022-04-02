@@ -14,3 +14,7 @@ payload:
   - "+.discordapp.com"
   - "+.discordapp.net"
   - "+.discordstatus.com"
+  - '+.github.com'
+  - '+.line.com'
+  - '+.line.me'
+  - '+.note.com'
