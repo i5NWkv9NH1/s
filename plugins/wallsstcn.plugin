@@ -1,4 +1,9 @@
 # 华尔街见闻
+[Script]
+http-response ^https?:\/\/api\-one\.wallstcn\.com\/apiv\d{1}\/user\/info\/me script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wallstcn/user.js, requires-body=true, tag=华尔街见闻-user
+http-response ^https?:\/\/api\-one\.wallstcn\.com\/apiv\d{1}\/vipv\d{1}\/vip\_info? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wallstcn/vip_info.js, requires-body=true, tag=华尔街见闻-vip
+
+
 [URL Rewrite]
 ^https?:\/\/api\-one\.wallstcn\.com\/apiv\d{1}\/advertising\/ads\? - reject
 ^https?:\/\/api\.growingio\.com\/v\d{1}\/*\/ios\? - reject
@@ -8,4 +13,4 @@
 DOMAIN-SUFFIX,dashuju-wscn.xuangubao.cn,REJECT
 
 [MITM]
-hostname = *.wallstcn.com,api.growingio.com,eco.taobao.com
+hostname = *.wallstcn.com,api.growingio.com,eco.taobao.com,api-one.wallstcn.com

@@ -7,7 +7,7 @@ http-response ^https://app\.bilibili\.com\/x\/v\d{1}\/feed\/index\? script-path=
 
 http-response ^https://app\.bilibili\.com\/x\/v\d{1}\/account\/mine\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/mine.js, requires-body=true, tag=bilibili-mine
 
-http-request ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/BiLiBiLiBVIPCrack.js, requires-header=true, requires-body=true, binary-body-mode=true, tag=bilibili-vip
+# http-request ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/BiLiBiLiBVIPCrack.js, requires-header=true, requires-body=true, binary-body-mode=true, tag=bilibili-vip
 
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
@@ -37,4 +37,4 @@ DOMAIN-SUFFIX,data.bilibili.com,REJECT
 ^https?:\/\/miniapp\.bilibili.com\/api\/miniapp\/report\/* - reject
 
 [MITM]
-hostname = ap?.bilibili.com,miniapp.bilibili.com,grpc.biliapi.net,*.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66, 240e:b1:9801:206:11:0:0:*
+hostname = ap?.bilibili.com,miniapp.bilibili.com,grpc.,*.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66, 240e:b1:9801:206:11:0:0:*

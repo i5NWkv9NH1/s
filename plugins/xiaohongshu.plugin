@@ -1,0 +1,26 @@
+[Script]
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed\/categories? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/categories.js, requires-body=true, tag=小红书-首页tab分类
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/config? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/config.js, requires-body=true, tag=小红书-app设置
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/feed.js, requires-body=true, tag=小红书-首页feed广告
+http-response ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/tag\/ads_engage script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/ads_engage.js, requires-body=true, tag=小红书-广告
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/splash\_config script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/splash_config.js, requires-body=true, tag=小红书-开屏广告
+
+
+
+
+[Rule]
+DOMAIN-SUFFIX,crash.xiaohongshu.com,REJECT
+
+
+[URL Rewrite]
+^https?:\/\/www\.xiaohongshu\.com\/speedtest - reject
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/ads\/apple\/record - reject
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/ads\/resource? - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/huidu\/* - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed\/client\_downgrade\/report - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/permission\/report - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/metrics\_report - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/widgets - reject
+
+[MITM]
+hostname = *.xiaohongshu.com
