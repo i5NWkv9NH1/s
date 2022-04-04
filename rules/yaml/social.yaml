@@ -1,20 +1,22 @@
 payload:
   # twitter
-  - "+.t.co"
-  - "+.twitter.com"
-  - "+.twimg.com"
+  - '+.t.co'
+  - '+.twitter.com'
+  - '+.twimg.com'
   # instagram, facebook
-  - "+.facebook.com"
-  - "+.instagram.com"
-  - "+.fbcdn.net"
-  - "+.cdninstagram.com"
-  - "+.discord.com"
-  - "+.discord.gg"
-  - "+.discord.media"
-  - "+.discordapp.com"
-  - "+.discordapp.net"
-  - "+.discordstatus.com"
+  - '+.facebook.com'
+  - '+.instagram.com'
+  - '+.fbcdn.net'
+  - '+.cdninstagram.com'
+  - '+.discord.com'
+  - '+.discord.gg'
+  - '+.discord.media'
+  - '+.discordapp.com'
+  - '+.discordapp.net'
+  - '+.discordstatus.com'
   - '+.github.com'
   - '+.line.com'
   - '+.line.me'
   - '+.note.com'
+  - '+.line.naver.jp'
+  - '+.line-scdn.net'
