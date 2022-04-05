@@ -4,7 +4,7 @@
  * @date 2021-09-22
  */
 
-let body = $response.body
+ let body = JSON.parse($response.body);
 
 body.data = {
 	text: '分享',
@@ -24,7 +24,6 @@ body.data = {
 	]
 }
 
-body = JSON.parse(body)
 
 body = JSON.stringify(body)
 

@@ -4,11 +4,10 @@
  * @date 2021-09-22
  */
 
- let body = $response.body
+ let body = JSON.parse($response.body);
+
 
  delete(body.ad_info)
-
- body = JSON.parse(body)
 
  body = JSON.stringify(body)
 

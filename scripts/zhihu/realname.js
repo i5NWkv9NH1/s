@@ -4,7 +4,7 @@
  * @date 2021-09-22
  */
 
-let body = $response.body
+ let body = JSON.parse($response.body);
 
 body.data = {
 	progress: 'submit',
@@ -13,7 +13,7 @@ body.data = {
 	auth_type: 'realname'
 }
 
-body = JSON.parse(body)
+
 
 body = JSON.stringify(body)
 

@@ -5,8 +5,7 @@
  */
 
 
-let body = $response.body;
-body = JSON.parse(body);
+let body = JSON.parse($response.body);
 
 body = JSON.stringify(body);
 
