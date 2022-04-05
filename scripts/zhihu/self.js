@@ -49,15 +49,7 @@
 
 	body.is_realname = true
 
-	body.mcn_user_info = {
-		status: 0,
-    goods_count: 0,
-    showcase_permission: 0,
-    available_source: [],
-		bind_info: [],
-		jingdong_param: '',
-		jingdong_app_param: ''
-	}
+	delete body.mcn_user_info;
 
 
  body = JSON.stringify(body);
