@@ -1,0 +1,19 @@
+[Script]
+http-response ^https?:\/\/hera\-webapp\.fenbi\.com\/iphone\/recommend\/tablist? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/tablist.js, requires-body=true, tag=粉笔-发现页tab
+http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/entrance_show.js, requires-body=true, tag=粉笔-首页浮动按钮
+
+[URL Rewrite]
+http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* - reject
+^https?:\/\/tiku\.fenbi\.com\/iphone\/xingce\/launcher\/v\d{1}\? - reject
+^https?:\/\/keapi\.fenbi\.com\/push\/iphone\/devices\/report? - reject
+
+[Rule]
+DOMAIN-SUFFIX,fp-it.fengkongcloud.com,REJECT
+DOMAIN-SUFFIX,collect.hupu.com,REJECT
+DOMAIN-SUFFIX,hermes.hupu.com,REJECT
+DOMAIN-SUFFIX,goblin.hupu.com,REJECT
+DOMAIN-SUFFIX,games-report.mobileapi.hupu.com,REJECT
+# ab
+DOMAIN-SUFFIX,themis.hupu.com,REJECT
+[MITM]
+hostname = *.hupu.com, games.mobileapi.hupu.com

@@ -1,10 +1,10 @@
 # 2021-11-03 12:30 UTC+9
 port: 7890
-socks-port: 7891
+socks-port: 7890
 allow-lan: false
-mode: Rule
+mode: rule
 log-level: info
-external-controller: 127.0.0.1:9090
+external-controller: '127.0.0.1:9090'
 experimental:
   ignore-resolve-fail: true
 dns:
@@ -20,25 +20,26 @@ dns:
 proxies:
 
 proxy-groups:
-  - { name: '香港 🇭🇰', type: select, proxies: ['🇭🇰 ①香港 | HKG x1.0{艾可云}', '🇭🇰 ②香港 | HKG x1.0{艾可云}', '🇭🇰 ③香港 | HKG x1.0{艾可云}', '🇭🇰 ④香港 | HKG x1.0{艾可云}', '🇭🇰 ⑤香港 | HKG x1.0{艾可云}', '🇭🇰 ⑥香港 | HKG [解锁] x1.2{艾可云}', '🇭🇰 ⑦香港 | HKG [解锁] x1.2{艾可云}', '🇭🇰 ⑧香港 | HKG [解锁] x1.2{艾可云}'] }
-  - { name: '日本 🇯🇵', type: select, proxies: ['🇯🇵 ①日本 | JPN x1.0{艾可云}', '🇯🇵 ②日本 | JPN x1.0{艾可云}', '🇯🇵 ③日本 | JPN x1.0{艾可云}', '🇯🇵 ④日本 | JPN [解锁] x1.2{艾可云}', '🇯🇵 ⑤日本 | JPN [解锁] x1.2{艾可云}'] }
-  - { name: '韩国 🇰🇷', type: select, proxies: ['🇰🇷 ①韩国 | KOR x1.0{艾可云}', '🇰🇷 ②韩国 | KOR x1.0{艾可云}'] }
-  - { name: '台湾 🇹🇼', type: select, proxies: ['🇹🇼 ①台湾 | TWN [解锁] x1.2{艾可云}', '🇹🇼 ②台湾 | TWN [解锁] x1.2{艾可云}'] }
-  - { name: '新加坡 🇸🇬', type: select, proxies: ['🇸🇬 ①新加坡 | SGP x1.0{艾可云}', '🇸🇬 ②新加坡 | SGP x1.0{艾可云}', '🇸🇬 ③新加坡 | SGP [解锁] x1.2{艾可云}', '🇸🇬 ④新加坡 | SGP [解锁] x1.2{艾可云}'] }
-  - { name: '美国 🇺🇸', type: select, proxies: ['🇺🇸 ①美国 | USA x1.0{艾可云}', '🇺🇸 ②美国 | USA x1.0{艾可云}', '🇺🇸 ③美国 | USA [解锁] x1.2{艾可云}', '🇺🇸 ④美国 | USA [解锁] x1.2{艾可云}'] }
-  - { name: '其他', type: select, proxies: ['🇻🇳 ①越南 | VNM [解锁] x1.2{艾可云}', '🇮🇳 ①印度 | IND x1.0{艾可云}', '🇷🇺 ①俄罗斯 | RUS x1.0{艾可云}', '🇬🇧 ①英国 | GBR x1.0{艾可云}', '🇳🇱 ①荷兰 | NLD x1.0{艾可云}', '🇩🇪 ①德国 | DEU x1.0{艾可云}']}
-  - { name: '游戏', type: select, proxies: ['🇭🇰🎮 ①广港游戏专用(限速2Mb) x15.0', '🇭🇰🎮 ②广港游戏专用(限速2Mb) x15.0']}
-  - { name: 'Default', type: select, proxies: ['香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
-  - { name: 'Telegram', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Google', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Youtube', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Stream', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Social', type: select, proxies: ['Default', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Cloud', type: select, proxies: ['DIRECT', 'Default', 'REJECT','香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Firefox', type: select, proxies: ['DIRECT', 'Default', 'REJECT','香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Microsoft', type: select, proxies: ['DIRECT', 'Default', 'REJECT','香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'iCloud', type: select, proxies: ['DIRECT', 'Default', 'REJECT','香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
-  - { name: 'Apple', type: select, proxies: ['DIRECT', 'Default', 'REJECT', '香港 🇭🇰', '韩国 🇰🇷', '日本 🇯🇵', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
+	- { name: '香港 🇭🇰', type: select, proxies: ['🇭🇰 ①香港 | HKG [解锁] x1.2{艾可云}', '🇭🇰 ②香港 | HKG [解锁] x1.2{艾可云}', '🇭🇰 ③香港 | HKG [解锁] x1.2{艾可云}', '🇭🇰 ④香港 | HKG [解锁] x1.2{艾可云}', '🇭🇰 ⑤香港 | HKG [解锁] x1.2{艾可云}'] }
+	- { name: '日本 🇯🇵', type: select, proxies: ['🇯🇵 ①日本 | JPN x1.0{艾可云}', '🇯🇵 ②日本 | JPN x1.0{艾可云}', '🇯🇵 ③日本 | JPN x1.0{艾可云}', '🇯🇵 ④日本 | JPN [解锁] x1.2{艾可云}', '🇯🇵 ⑤日本 | JPN [解锁] x1.2{艾可云}'] }
+	- { name: '韩国 🇰🇷', type: select, proxies: ['🇰🇷 ①韩国 | KOR x1.0{艾可云}', '🇰🇷 ②韩国 | KOR x1.0{艾可云}'] }
+	- { name: '台湾 🇹🇼', type: select, proxies: ['🇹🇼 ①台湾 | TWN [解锁] x1.2{艾可云}', '🇹🇼 ②台湾 | TWN [解锁] x1.2{艾可云}'] }
+	- { name: '新加坡 🇸🇬', type: select, proxies: ['🇸🇬 ①新加坡 | SGP x1.0{艾可云}', '🇸🇬 ②新加坡 | SGP x1.0{艾可云}', '🇸🇬 ③新加坡 | SGP [解锁] x1.2{艾可云}'] }
+	- { name: '美国 🇺🇸', type: select, proxies: ['🇺🇸 ①美国 | USA x1.0{艾可云}', '🇺🇸 ②美国 | USA x1.0{艾可云}', '🇺🇸 ③美国 | USA [解锁] x1.2{艾可云}', '🇺🇸 ④美国 | USA [解锁] x1.2{艾可云}', '🇺🇸 ⑤美国 | USA [解锁] x1.2{艾可云}'] }
+	- { name: '其他', type: select, proxies: ['🇻🇳 ①越南 | VNM [解锁] x1.2{艾可云}', '🇮🇳 ①印度 | IND x1.0{艾可云}', '🇷🇺 ①俄罗斯 | RUS x1.0{艾可云}', '🇬🇧 ①英国 | GBR x1.0{艾可云}', '🇳🇱 ①荷兰 | NLD x1.0{艾可云}', '🇩🇪 ①德国 | DEU x1.0{艾可云}', '🇨🇦 ①加拿大 | CAN x1.0{艾可云}'] }
+	- { name: '游戏', type: select, proxies: ['🇭🇰🎮 ①广港游戏专用(限速3Mb) x13.0', '🇭🇰🎮 ②广港精品游戏专用(限速2Mb) x15.0' ] }
+	- { name: '默认 Default', type: select, proxies: ['香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '谷歌 Google', type: select, proxies: ['默认 Default', '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
+	- { name: '油管 Youtube', type: select, proxies: ['默认 Default', '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他'] }
+	- { name: '电报 Telegram', type: select, proxies: ['默认 Default', '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '流媒体 Stream', type: select, proxies: ['默认 Default', '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '国外社交 Social', type: select, proxies: ['默认 Default', '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '国外云盘 Cloud', type: select, proxies: ['默认 Default', DIRECT, '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '火狐 Firefox', type: select, proxies: ['默认 Default', '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '微软 Microsoft', type: select, proxies: ['默认 Default', DIRECT, REJECT, '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '苹果 iCloud', type: select, proxies: ['默认 Default', REJECT, '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+	- { name: '苹果 Apple', type: select, proxies: ['默认 Default', REJECT, '香港 🇭🇰', '日本 🇯🇵', '韩国 🇰🇷', '台湾 🇹🇼', '新加坡 🇸🇬', '美国 🇺🇸', '其他', '游戏'] }
+
 
 rule-providers:
   BanAD:

@@ -12,7 +12,3 @@ DOMAIN-SUFFIX,data-api.fenbi.com,REJECT
 DOMAIN-SUFFIX,algo.fenbi.com,REJECT
 [MITM]
 hostname = *.fenbi.com,*.fbstatic.cn,hera-webapp.fenbi.com,marker-api.fenbi.com,keapi.fenbi.com
-
-
-123.206.1.227/16	// 行测
-60.205.108.139/16 // 申论
