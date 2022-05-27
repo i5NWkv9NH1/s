@@ -12,4 +12,4 @@ http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/log
 ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/login\/deviceSave - reject
 
 [MITM]
-*.gongkaoleida.com,api.gongkaoleida.com
+hostname = *.gongkaoleida.com,api.gongkaoleida.com

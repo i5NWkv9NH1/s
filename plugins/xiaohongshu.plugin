@@ -23,4 +23,4 @@ DOMAIN-SUFFIX,crash.xiaohongshu.com,REJECT
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/widgets - reject
 
 [MITM]
-hostname = *.xiaohongshu.com
+hostname = www.xiaohongshu.com,edith.xiaohongshu.com

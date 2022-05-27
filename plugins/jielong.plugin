@@ -1,0 +1,5 @@
+[URL Rewrite]
+^https?:\/\/api\.jielong\.co\/api\/Common\/GetBanners? - reject
+
+[MITM]
+hostname = api.jielong.co
