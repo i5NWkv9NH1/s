@@ -1,5 +1,5 @@
 [Script]
-http-response ^https?:\/\/account\.wps\.cn\/api\/users script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, requires-body=true, tag=wps-vip
+http-response ^https?:\/\/sg\-account\.wps\.com\/api\/v\d{1}\/mine\/vips script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wps.js, requires-body=true, tag=wps-vip
 
 
 [Rule]
@@ -8,4 +8,4 @@ DOMAIN-SUFFIX,ios-push.wps.cn,REJECT
 [URL Rewrite]
 
 [MITM]
-hostname = account.wps.cn
+hostname = sg-account.wps.com
