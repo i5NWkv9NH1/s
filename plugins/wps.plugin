@@ -1,6 +1,6 @@
 [Script]
-http-response ^https?:\/\/sg\-account\.wps\.com\/api\/v\d{1}\/mine\/vips script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wps.js, requires-body=true, tag=wps-vip-sg
-http-response ^https?:\/\/sg\-account\.wps\.com\/api\/users\/\d{9}\/overview script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wps.js, requires-body=true, tag=wps-vip-sg-overview
+http-response ^https?:\/\/sg\-account\.wps\.com\:443\/api\/v\d{1}\/mine\/vips script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wps.js, requires-body=true, tag=wps-vip-sg
+http-response ^https?:\/\/sg\-account\.wps\.com\:443\/api\/users\/\d{9}\/overview script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wps.js, requires-body=true, tag=wps-vip-sg-overview
 http-response ^https?:\/\/account\.wps\.cn\/api\/users script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/wps.js, requires-body=true, tag=wps-vip-cn
 
 [Rule]
