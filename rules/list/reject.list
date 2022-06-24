@@ -103,7 +103,6 @@ DOMAIN-SUFFIX,boxer.baidu.com
 DOMAIN-SUFFIX,ada.baidu.com
 DOMAIN-SUFFIX,fex.bdstatic.com
 DOMAIN-SUFFIX,vdposter.bdstatic.com
-DOMAIN-SUFFIX,mbd.baidu.com
 DOMAIN-SUFFIX,fc1tn.baidu.com
 DOMAIN-SUFFIX,rtprod.pae.baidu.com
 DOMAIN-SUFFIX,sp0.baidu.com
@@ -142,9 +141,7 @@ DOMAIN-SUFFIX,fe_perf_env.dreport.meituan.net
 DOMAIN-SUFFIX,dreport.meituan.net
 DOMAIN-SUFFIX,flowplus.meituan.net
 DOMAIN-SUFFIX,hreport.meituan.com
-DOMAIN-SUFFIX,catdot.dianping.com
 DOMAIN-SUFFIX,hreport.meituan.com
-DOMAIN-SUFFIX,catdot.dianping.com
 DOMAIN-SUFFIX,trk2.pinterest.com
 DOMAIN-SUFFIX,trk.pinterest.com
 DOMAIN-SUFFIX,events.redditmedia.com
@@ -330,7 +327,6 @@ DOMAIN-SUFFIX,jsqmt.qq.com
 DOMAIN-SUFFIX,trace.tgp.qq.com
 DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com
 DOMAIN-SUFFIX,merchandise.opera-api.com
-DOMAIN-SUFFIX,adesk.com
 DOMAIN-SUFFIX,miniapi.gifshow.com
 DOMAIN-SUFFIX,even.northghost.com
 DOMAIN-SUFFIX,event.northghost.com
@@ -646,3 +642,18 @@ DOMAIN-SUFFIX,datahub.zhihu.com
 DOMAIN-SUFFIX,wu4647.xyz
 DOMAIN-SUFFIX,open.kwaizt.com
 DOMAIN-SUFFIX,open.kuaishouzt.com
+DOMAIN-SUFFIX,node.kg.qq.com
+DOMAIN-SUFFIX,publiclog.zhiyan.tencent-cloud.net
+DOMAIN-SUFFIX,applog.thepaper.cn
+DOMAIN-SUFFIX,adx.sogaha.cn
+DOMAIN-SUFFIX,gdfp.gifshow.com
+DOMAIN-SUFFIX,wynaclick.baidu.com
+DOMAIN-SUFFIX,knicks.jd.com
+DOMAIN-SUFFIX,janapi.jd.com
+DOMAIN-SUFFIX,dsp-x.jd.com
+DOMAIN-SUFFIX,xlog.jd.com
+DOMAIN-SUFFIX,dg.k.jd.com
+DOMAIN-SUFFIX,mazu.m.qq.com
+DOMAIN-SUFFIX,datacollector-drcn.dt.hicloud.com
+DOMAIN-SUFFIX,da.anythinktech.com
+DOMAIN-SUFFIX,dcloud.net.cn

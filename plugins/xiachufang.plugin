@@ -1,7 +1,7 @@
 [URL Rewrite]
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/homepage1810\/init_page.json? _ reject
-^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/* _ reject
-
+^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/lookup_hybrid_ad_by_slot_name\.json _ reject
+^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad* _ reject
 [Script]
 
 [Rule]

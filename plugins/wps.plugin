@@ -5,6 +5,7 @@ http-response ^https?:\/\/account\.wps\.cn\/api\/users script-path=https://raw.g
 
 [Rule]
 DOMAIN-SUFFIX,ios-push.wps.cn,REJECT
+DOMAIN-SUFFIX,ios-pay.wps.com,REJECT
 
 [URL Rewrite]
 
