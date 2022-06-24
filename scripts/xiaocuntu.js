@@ -6,7 +6,6 @@
 
 
  let body = JSON.parse($response.body);
- body = JSON.stringify(body);
  body.data.entities.show = {
   buyVip: true,
   fuli: true
@@ -15,7 +14,7 @@
   vipType: '会员',
   description: '剩余下载次数：999999'
  }
- 
+ body = JSON.stringify(body);
  $done({
    body
  })
