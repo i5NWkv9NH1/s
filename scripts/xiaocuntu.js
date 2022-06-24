@@ -6,15 +6,13 @@
 
 
  let body = JSON.parse($response.body);
- body.data.entities.show = {
-  buyVip: true,
-  fuli: true
- }
- body.data.entities.userInfo = {
-  vipType: '会员',
-  description: '剩余下载次数：999999'
- }
+ body.data.entities.show.buyVip = true;
+ body.data.entities.show.fuli = true;
+ body.data.entities.userInfo.vipType = '会员';
+ body.data.entities.userInfo.description = '剩余下载次数：999999';
+
  body = JSON.stringify(body);
+ 
  $done({
    body
  })
