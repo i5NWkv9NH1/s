@@ -1,6 +1,6 @@
 /**
  * @description 华尔街见闻 user
- * @url ^https?:\/\/api\-one\.wallstcn\.com\/apiv\d{1}\/user\/info\/me
+ * @url ^https?:\/\/api\-one\.wallstcn\.com\/\apiv\d{1}\/user\/info\/me
  */
 
 

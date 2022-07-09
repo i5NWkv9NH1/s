@@ -36,7 +36,7 @@ var obj = {
 		{
 			name: "超级会员",
 			has_ad: 0,
-			memberid: 40,
+			memberid: 12,
 			expire_time: 1846256142,
 			enabled: [
 				{ memberid: 40, name: "超级会员", expire_time: 1846256142 },
