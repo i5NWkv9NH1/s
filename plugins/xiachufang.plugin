@@ -1,10 +1,12 @@
 [URL Rewrite]
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/homepage1810\/init_page.json? _ reject
-^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/lookup_hybrid_ad_by_slot_name\.json _ reject
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad* _ reject
+^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/lookup_hybrid_ad_by_slot_name\.json _ reject
+^https?:\/\/api\.xiachufang\.com\/v\d{1}\/events\/paged\_user\_created\_events\.json _ reject
 
 [Script]
-http-response ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/config\/get\.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiachufang.js, requires-body=true, tag=下厨房-配置
+http-response ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/config\/get\.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiachufang/config.js, requires-body=true, tag=下厨房-配置
+http-response ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/homepage\/paged\_waterfall\recommendations\.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiachufang/recommendations.js, requires-body=true, tag=下厨房-推荐去广告
 
 [Rule]
 DOMAIN-SUFFIX,track.xiachufang.com,REJECT
