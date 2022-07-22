@@ -548,8 +548,6 @@ payload:
   - '+.inappcheck.itunes.apple.com'
   - '+.fyeds9.com'
   - '+.badjs.weixinbridge.com'
-  - '+.track.xiachufang.com'
-  - '+.trackbeat.xiachufang.com'
   - '+.stats.appsflyer.com'
   - '+.ulogjs.gifshow.com'
   - '+.ping.huatuo.qq.com'

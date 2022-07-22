@@ -1,5 +1,5 @@
 [Script]
-http-response ^https?:\/\/xhs\.xiaocuntu\.com\/v\d{3}\/user\/info script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaocuntu.js, requires-body=true, timeout=10, tag=xiaocuntu-vip
+http-response ^https?:\/\/xhs\.xiaocuntu\.com\/v\d{3}\/user\/info script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaocuntu.js, requires-body=true, tag=xiaocuntu-vip
 
 [MITM]
 hostname = xhs.xiaocuntu.com

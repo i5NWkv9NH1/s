@@ -1,5 +1,5 @@
 [Script]
-http-response ^https?:\/\/www\.xmind\.net\/\_res\/devices script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/XMind.js, requires-body=true, timeout=10, tag=xmind
+http-response ^https?:\/\/www\.xmind\.net\/\_res\/devices script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/XMind.js, requires-body=true, tag=思维导图 Xmind - 会员
 
 [URL Rewrite]
 https://www.xmind.net/_api/events? - reject

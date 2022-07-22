@@ -2,10 +2,13 @@
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/homepage1810\/init_page.json? _ reject
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/lookup_hybrid_ad_by_slot_name\.json _ reject
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad* _ reject
+
 [Script]
+http-response ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/config\/get\.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiachufang.js, requires-body=true, tag=下厨房-配置
 
 [Rule]
-
+DOMAIN-SUFFIX,track.xiachufang.com,REJECT
+DOMAIN-SUFFIX,trackbeat.xiachufang.com,REJECT
 
 [MITM]
 hostname = *.xiachufang.com

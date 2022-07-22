@@ -1,7 +1,0 @@
-[Script]
-http-response ^https?:\/\/xhtapi\.yuankan\.net\/index\/Version\/getConfig script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongtu/config.js, requires-body=true, timeout=10, tag=xiaohongtu-config
-http-response ^https?:\/\/xhtapi\.yuankan\.net\/index\/Member\/indexMenu script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongtu/menu.js, requires-body=true, timeout=10, tag=xiaohongtu-menu
-http-response ^https?:\/\/xhtapi\.yuankan\.net\/index\/Member\/vipInfo script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongtu/vip.js, requires-body=true, timeout=10, tag=xiaohongtu-vip
-
-[MITM]
-hostname = xhtapi.yuankan.net

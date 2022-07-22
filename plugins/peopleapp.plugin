@@ -4,7 +4,7 @@
 ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv - reject
 
 [Script]
-http-response ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp.js, requires-body=true, timeout=10, tag=peopleapp-ad
+http-response ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp.js, requires-body=true, tag=peopleapp-ad
 
 [Rule]
 DOMAIN-SUFFIX,stat.peopleapp.com,REJECT

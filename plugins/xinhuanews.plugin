@@ -1,5 +1,5 @@
 [URL Rewrite]
-^https?:\/\/xhpfmapi\.zhongguowangshi\.com\/v708\/config\/startadex - reject
+^https?:\/\/xhpfmapi\.zhongguowangshi\.com\/v\d{3}\/config\/startadex - reject
 
 [Rule]
 DOMAIN-SUFFIX,flume.xinhuaapp.com,REJECT
