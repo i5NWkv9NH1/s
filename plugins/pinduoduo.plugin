@@ -10,7 +10,9 @@ DOMAIN-SUFFIX,pmmtk.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,cmtw.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,cmta.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,th.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,th-b.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,tp.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,ta.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,titan.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,manortk.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,t-dsp.pinduoduo.com,REJECT
