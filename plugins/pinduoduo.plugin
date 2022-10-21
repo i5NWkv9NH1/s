@@ -19,4 +19,4 @@ DOMAIN-SUFFIX,lp.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,meta.pinduoduo.com,REJECT
 
 [MITM]
-
+hostname = api.pinduoduo.com

@@ -5,6 +5,7 @@
 
 [Rule]
 DOMAIN-SUFFIX,optimus-ads.amap,REJECT
+DOMAIN-SUFFIX,amap-aos-info-nogw.amap.com,REJECT
 
 [MITM]
 hostname = *.m5.amap.com, *.sns.amap.com
