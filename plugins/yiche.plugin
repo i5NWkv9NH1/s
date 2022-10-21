@@ -1,0 +1,20 @@
+# 汽车报价大全
+[Script]
+http-response ^https?:\/\/api\.ycapp\.yiche\.com\/yicheapp\/getresourcebygroup\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/yiche/resource.js, requires-body=true, tag=易车-路由
+http-response ^https?:\/\/bj\.app\.yiche\.com\/webapi\/app\d{4}\/v\d{3}\/ad\/app\?? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/yiche/ad.js, requires-body=true, tag=易车-广告
+http-response ^https?:\/\/bj\.app\.yiche\.com\/webapi\/api\/piece\/getpiece\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/yiche/piece.js, requires-body=true, tag=易车-默认
+http-response ^https?:\/\/mapi\.yiche\.com\/app\_config\/api\/v\d{1}\/material\/v\d{1}\/common\_material\_groups\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/yiche/material_group.js, requires-body=true, tag=易车-通用按钮文字
+
+[URL Rewrite]
+^https?:\/\/api\.app\.yiche\.com\/applog\/appconfig.ashx - reject
+
+[Rule]
+DOMAIN-SUFFIX,log.yccdn.com,REJECT
+DOMAIN-SUFFIX,log.ycapp.yiche.com,REJECT
+DOMAIN-SUFFIX,applog.yiche.com,REJECT
+DOMAIN-SUFFIX,adx.yiche.com,REJECT
+DOMAIN-SUFFIX,fp-it.fengkongcloud.com,REJECT
+DOMAIN-SUFFIX,mapitd.yiche.com,REJECT
+
+[MITM]
+hostname = *.yiche.com,api.app.yiche.com,api.ycapp.yiche.com,bj.app.yiche.com,mapi.yiche.com

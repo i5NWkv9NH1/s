@@ -1,5 +1,10 @@
 [Script]
 http-response ^https?:\/\/hera\-webapp\.fenbi\.com\/iphone\/recommend\/tablist? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/tablist.js, requires-body=true, tag=粉笔-发现页tab
+http-response ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/guide\_center\/guides\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/guide.js, requires-body=true, tag=粉笔-guides
+http-response ^https?:\/\/keapi\.fenbi\.com\/iphone\/xingce\/small\_banner\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/banner.js, requires-body=true, tag=粉笔-banner
+http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/my\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/my.js, requires-body=true, tag=粉笔-my
+http-response ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/user\_member\/entry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/entry.js, requires-body=true, tag=粉笔-entry
+
 http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/entrance_show.js, requires-body=true, tag=粉笔-首页浮动按钮
 
 [URL Rewrite]

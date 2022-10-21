@@ -1,0 +1,15 @@
+/**
+ * @desc
+ * @url ^https?:\/\/pan\.baidu\.com\/api\/taskcore\/taskgrouplist\?
+ * @date 2021-09-22
+ */
+
+let body = JSON.parse($response.body)
+
+body.data.daily = []
+
+body = JSON.stringify(body)
+
+$done({
+	body
+})

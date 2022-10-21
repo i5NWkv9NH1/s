@@ -1,0 +1,8 @@
+# 半月谈 app
+[URL Rewrite]
+^https?:\/\www\.bytapp\.com\/byt\-api\/ad\/* - reject
+
+[Rule]
+
+[MITM]
+hostname = bytapp.com
