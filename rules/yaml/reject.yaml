@@ -658,3 +658,7 @@ payload:
   - '+.dcloud.net.cn'
   - '+.mpass-loggw4zwy.aliyuncs.com'
   - '+.adsys.nineton.cn'
+  - '+.d.meituan.net'
+  - '+.catdot.dianping.com'
+  - '+.appsec-mobile.meituan.com'
+  - '+.catfront.dianping.com'
