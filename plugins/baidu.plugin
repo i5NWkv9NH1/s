@@ -11,7 +11,7 @@ http-response ^https?:\/\/pan\.baidu\.com\/api\/taskcore\/taskgrouplist\? script
 http-response ^https?:\/\/pan\.baidu\.com\/pmall\/points\/goodslist\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/goodslist.js, requires-body=true, tag=百度网盘-商品列表
 http-response ^https?:\/\/pan\.baidu\.com\/point\/product\/optlist\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/optlist.js, requires-body=true, tag=百度网盘-定制广告
 http-response ^https?:\/\/pan\.baidu\.com\/act\/v\d{1}\/membergrow\/list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/membergrow-list.js, requires-body=true, tag=百度网盘-用户兑换广告
-http-response ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/membergrow-list.js, requires-body=true, tag=百度网盘-弹窗
+http-response ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/activityentry.js, requires-body=true, tag=百度网盘-弹窗
 http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/adv.js, requires-body=true, tag=百度网盘-事件广告
 http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/proxy\/guide\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/guide.js, requires-body=true, tag=百度网盘-新人礼
 http-response ^https:\/\/pan\.baidu\.com\/aipic\/tags\/getconfig\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/tags.js, requires-body=true, tag=百度网盘-相册标签

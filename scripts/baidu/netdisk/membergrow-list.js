@@ -6,7 +6,7 @@
 
 let body = JSON.parse($response.body)
 
-body.data.list = []
+body.list = []
 
 body = JSON.stringify(body)
 
