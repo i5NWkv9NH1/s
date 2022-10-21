@@ -6,11 +6,10 @@ http-response ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/tag\/ads_enga
 http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/splash\_config script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/splash_config.js, requires-body=true, tag=小红书-开屏广告
 
 
-
-
 [Rule]
 DOMAIN-SUFFIX,crash.xiaohongshu.com,REJECT
-
+DOMAIN-SUFFIX,t2.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,lng.xiaohongshu.com,REJECT
 
 [URL Rewrite]
 ^https?:\/\/www\.xiaohongshu\.com\/speedtest - reject
@@ -21,6 +20,7 @@ DOMAIN-SUFFIX,crash.xiaohongshu.com,REJECT
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/permission\/report - reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/metrics\_report - reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/widgets - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/splash\_config - reject
 
 [MITM]
 hostname = www.xiaohongshu.com,edith.xiaohongshu.com
