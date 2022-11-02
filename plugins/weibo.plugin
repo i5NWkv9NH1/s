@@ -1,8 +1,9 @@
 [URL Rewrite]
 ^https?://[^/]+/2/logservice/(service|attach)(?:/?|/?#.*)$ - reject
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a\=get\_coopen\_ads
 
 [Rule]
-
+DOMAIN-SUFFIX,adstrategy.biz.weibo.com,REJECT
 
 [MITM]
-hostname = *.api.weibo.cn.com
+hostname = *.api.weibo.cn.com,api.weibo.cn, *.weibointl.api.weibo.cn
