@@ -1,6 +1,5 @@
 DOMAIN-SUFFIX,loggw.alipay.com
 DOMAIN-SUFFIX,h-adashx.ut.taobao.com
-DOMAIN-SUFFIX,amdc.m.taobao.com
 DOMAIN-SUFFIX,log.mmstat.com
 DOMAIN-SUFFIX,px.effirst.com
 DOMAIN-SUFFIX,optimus-ad.amap.com
@@ -127,7 +126,6 @@ DOMAIN-SUFFIX,hd.hupu.com
 DOMAIN-SUFFIX,goblin.hupu.com
 DOMAIN-SUFFIX,hermes.hupu.com
 DOMAIN-SUFFIX,adx.hupu.com
-DOMAIN-SUFFIX,qcloud.dpfile.com
 DOMAIN-SUFFIX,bundle-backup.meituan.net
 DOMAIN-SUFFIX,grocery.meituan.com
 DOMAIN-SUFFIX,medusa.dianping.com
@@ -540,7 +538,6 @@ DOMAIN-SUFFIX,lc.zt.changba.com
 DOMAIN-SUFFIX,bsrv.qq.com
 DOMAIN-SUFFIX,soup.v.qq.com
 DOMAIN-SUFFIX,msf.3g.qq.com
-DOMAIN-SUFFIX,sqdd.myapp.com
 DOMAIN-SUFFIX,ads.aplus.pptv.com
 DOMAIN-SUFFIX,ads.data.pplive.com
 DOMAIN-SUFFIX,wxs.qq.com
@@ -663,3 +660,6 @@ DOMAIN-SUFFIX,d.meituan.net
 DOMAIN-SUFFIX,catdot.dianping.com
 DOMAIN-SUFFIX,appsec-mobile.meituan.com
 DOMAIN-SUFFIX,catfront.dianping.com
+DOMAIN-SUFFIX,gnrty.kmjkwe.xyz
+DOMAIN-SUFFIX,krg.wxdqgmr.cn
+DOMAIN-SUFFIX,pdl.ixelrsd.cn
