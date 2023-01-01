@@ -1,7 +1,10 @@
 # 随手记
 [Script]
-http-response ^https?:\/\/yunmk\.feideetech\.net\/cab\-market\-ws\/market\/v\d{1}\/contents\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/feidee/suggestion.js, requires-body=true, tag=记账本-推荐
-http-response^https?:\/\/weatherapi\.ccqyj\.com\/Configure\/index script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccqyj/configure.js, requires-body=true, tag=天气预报-configure
+http-response ^https?:\/\/yunmk\.feidee\.net\/cab\-market\-ws\/market\/v\d{1}\/contents script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/feidee/market.js, requires-body=true, tag=随手记-推荐
+http-response ^https?:\/\/userapi\.feidee\.net\/v\d{1}\/profile\/basic\_info script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/feidee/profile.js, requires-body=true, tag=随手记-用户vip
+http-response ^https?:\/\/message\.feidee\.com\/message\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/feidee/message.js, requires-body=true, tag=随手记-用户vip
+http-response ^https?:\/\/((user)?api|community)\.feidee\.(net|com)\/(v\d\/(pay/vip|profile/basic_info|app_themes/types)|transfer\/gapi\/accurat\/v\d\/tasks) script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SuiShouJi.js, requires-body=true, tag=随手记
+http-response ^https?:\/\/api\.feidee\.net\/v\d\/app_themes\/\d+\/download script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SuiShouJi.js, requires-body=true, tag=随手记-download
 
 [URL Rewrite]
 
@@ -9,6 +12,7 @@ http-response^https?:\/\/weatherapi\.ccqyj\.com\/Configure\/index script-path=ht
 DOMAIN-SUFFIX,data.feidee.net,REJECT
 DOMAIN-SUFFIX,tg.feidee.com,REJECT
 DOMAIN-SUFFIX,moneymarket.sjjlicai.com,REJECT
+DOMAIN-SUFFIX,kinglog.feidee.net,REJECT
 
 [MITM]
-hostname = *.feidee.net,*.feidee.com,*.feideetch.net,yunmk.feideetech.net
+hostname = *.feidee.net,*.feidee.com,api.feidee.net,yunmk.feidee.net,message.feidee.com,community.feidee.com,userapi.feidee.net

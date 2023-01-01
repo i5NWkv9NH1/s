@@ -98,7 +98,6 @@ DOMAIN-SUFFIX,baikebcs.bdimg.com
 DOMAIN-SUFFIX,dlswbr.baidu.com
 DOMAIN-SUFFIX,sv.bdstatic.com
 DOMAIN-SUFFIX,sp1.baidu.com
-DOMAIN-SUFFIX,boxer.baidu.com
 DOMAIN-SUFFIX,ada.baidu.com
 DOMAIN-SUFFIX,fex.bdstatic.com
 DOMAIN-SUFFIX,vdposter.bdstatic.com
@@ -258,14 +257,11 @@ DOMAIN-SUFFIX,pangolin.snssdk.com
 DOMAIN-SUFFIX,crashlytics2.l.google.com
 DOMAIN-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com
 DOMAIN-SUFFIX,sf3-ttcdn-tos.pstatp.com
-DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,cpatrk.net
 DOMAIN-SUFFIX,adt.cpatrk.net
 DOMAIN-SUFFIX,bdtj.tagtic.cn
 DOMAIN-SUFFIX,xy-log2.tagtic.cn
 DOMAIN-SUFFIX,zz.bdstatic.com
-DOMAIN-SUFFIX,umengcloud.com
-DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,pangolin.snssdk.com
 DOMAIN-SUFFIX,sf3-ttcdn-tos.psstatp.com
 DOMAIN-SUFFIX,qzs.qq.com
@@ -668,3 +664,12 @@ DOMAIN-SUFFIX,wuji.video.qq.com
 DOMAIN-SUFFIX,sdkconfig.video.qq.com
 DOMAIN-SUFFIX,event.toggle.qq.com
 DOMAIN-SUFFIX,tpstelemetry.tencent.com
+DOMAIN-SUFFIX,msg.umengcloud.com
+DOMAIN-SUFFIX,sdktmp.hubcloud.com,cn
+DOMAIN-SUFFIX,mon.snssdk.com
+DOMAIN-SUFFIX,topshu.xyz
+DOMAIN-SUFFIX,100343dfs.com
+DOMAIN-SUFFIX,086qdaa.com
+DOMAIN-SUFFIX,066hjkl.com
+DOMAIN-SUFFIX,078uijy.com
+DOMAIN-SUFFIX,renzhongjiaoyu.xyz
