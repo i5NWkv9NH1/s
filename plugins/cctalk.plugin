@@ -1,0 +1,19 @@
+#!name = CCtalk
+#!icon = https://img.informer.com/icons_mac/png/128/538/538643.png
+[Script]
+http-response ^https:\/\/cctalk\.hjapi\.com\/find\/v\d{1}\.\d{1}\/floor_list_new\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/cctalk/floor_list_new.js, requires-body=true, tag=cctalk-发现页-列表
+http-response ^https:\/\/cctalk\.hjapi\.com\/find\/v\d{1}\.\d{1}\/m\/channel\/content\_list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/cctalk/content_list.js, requires-body=true, tag=cctalk-猜你喜欢
+http-response ^https:\/\/cctalk\.hjapi\.com\/sns\/v\d{1}\.\d{1}\/medal\/all\/config\_list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/cctalk/config_list.js, requires-body=true, tag=cctalk-stuff
+
+
+[URL Rewrite]
+^https:\/\/u\d{1}.hjapi.com\/v\d{1}\/logbatch - reject
+^https:\/\/u\d{1}.hjapi.com\/v\d{1}\/getAd - reject
+^https:\/\/u[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-].hjapi.com\/v\d{1}\/api\/log\? - reject
+^https:\/\/cctalk\.hjapi\.com\/content\/v\d{1}\.\d{1}\/gift\/load\/recommend\? - reject
+
+[Rule]
+
+
+[MITM]
+hostname=u*.hjapi.com,cctalk.hjapi.com

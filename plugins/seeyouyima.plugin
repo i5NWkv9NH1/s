@@ -1,0 +1,20 @@
+# 美柚
+[Script]
+http-response ^https?:\/\/users\.seeyouyima\.com\/v\d{1}\/wo\?category\= script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/seeyouyima/wo.js, requires-body=true, tag=美柚-我的页面
+http-response ^https?:\/\/data\.seeyouyima\.com\/v\d{1}\/user\_recommended\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/seeyouyima/wo.js, requires-body=true, tag=美柚-首页信息流
+http-response ^https?:\/\/data\.seeyouyima\.com\/v\d{1}\/jingqi\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/seeyouyima/jingqi.js, requires-body=true, tag=美柚-首页banner块
+http-response ^https?:\/\/jingqi\.youzibuy\.com\/tae\_config\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/seeyouyima/tae_config.js, requires-body=true, tag=美柚-tae-config
+
+[URL Rewrite]
+^https?:\/\/users\.seeyouyima\.com\/v\d{1}\/dev - REJECT
+
+[Rule]
+DOMAIN-SUFFIX, ad.seeyouyima.com, REJECT
+DOMAIN-SUFFIX, ab.seeyouyima.com, REJECT
+DOMAIN-SUFFIX, ga.seeyouyima.com, REJECT
+DOMAIN-SUFFIX, youzijie.seeyouyima.com, REJECT
+DOMAIN-SUFFIX, amp.meiyou.com, REJECT
+DOMAIN-SUFFIX, h-adashx4bc.ut.taobao.com, REJECT
+
+[MITM]
+hostname=users.seeyouyima.com,data.seeyouyima.com,jingqi.youzibuy.com

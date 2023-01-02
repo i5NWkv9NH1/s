@@ -3,12 +3,11 @@
  * @url ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed?
  */
 
+let body = JSON.parse($response.body)
 
- let body = JSON.parse($response.body);
+body.data = body.data.filter((item) => item.is_ads !== true)
 
- body.data = body.data.filter(item => item.is_ads !== true)
-
- body = JSON.stringify(body);
- $done({
-		 body
- });
+body = JSON.stringify(body)
+$done({
+  body
+})

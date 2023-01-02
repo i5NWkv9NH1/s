@@ -1,24 +1,27 @@
 [Script]
 http-response ^https?:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pub.js, requires-body=true, tag=拼多多-tab
 http-response ^https?:\/\/api\.pinduoduo\.com\/api\/cappuccino\/splash\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/splash.js, requires-body=true, tag=拼多多-开屏广告
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/social\/my\/info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/info.js, requires-body=true, tag=拼多多-信息
 http-response ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/app\_popup\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/popup.js, requires-body=true, tag=拼多多-弹窗
-
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/aquarius.js, requires-body=true, tag=拼多多-弹窗2
 [URL Rewrite]
 
 [Rule]
-DOMAIN-SUFFIX,pmmtk.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,cmtw.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,cmta.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,th.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,th-b.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,tp.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,ta.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,titan.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,manortk.pinduoduo.com,REJECT
-DOMAIN-SUFFIX,t-dsp.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,abtk.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,at.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,cmta.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,cmtw.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,lp.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,manortk.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,meta.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,pmmtk.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,t-dsp.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,ta.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,th-b.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,th-a.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,th.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,titan.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,tp.pinduoduo.com,REJECT
 
 [MITM]
 hostname = api.pinduoduo.com

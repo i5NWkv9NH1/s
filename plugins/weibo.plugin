@@ -1,12 +1,40 @@
+#!name = 微博去广告
+#!desc = 过滤微博广告及去除各部分推广模块，支持微博国际版。
+#!openUrl =
+#!author = zmqcherish Cuttlefish
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+
 [URL Rewrite]
-^https?://[^/]+/2/logservice/(servijce|attach)(?:/?|/?#.*)$ - reject
-^https?:\/\/api\.weibo\.cn\/\d{1}\/sdk\/union\_config - reject
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads - reject
+^https?://[^/]+/2/logservice/(servijce|attach)(?:/?|/?#.*)$ - reject-200
+^https?:\/\/api\.weibo\.cn\/\d{1}\/sdk\/union\_config - reject-200
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads - reject-200
+
+# 微博国际版热搜
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users reject-dict
+# 微博国际版热推荐
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? reject-dict
+# 微博国际版屏蔽search_suggest
+# ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest reject-dict
+# 微博_Spotlight
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight reject-dict
+
+
 
 [Script]
-http-response ^https:\/\/api\.weibo\.cn\/2\/ad\/weibointl\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/ad-weibointl.js, requires-body=true, tag=weibo-ad-weibointl
+# http-response ^https:\/\/api\.weibo\.cn\/2\/ad\/weibointl\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/ad-weibointl.js, requires-body=true, tag=weibo-ad-weibointl
 # http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/get_coopen_ads.js, requires-body=true, tag=weibo-get_coopen_ads
 http-response ^https?:\/\/api\.weibo\.cn\/\d{1}\/statuses\/friends\/timeline script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/statuses_friends_timeline.js, requires-body=true, tag=weibo-timeline-ads
+
+# 微博国际版屏蔽开屏广告
+# http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版屏蔽开屏广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+# 微博及微博国际版去SDK广告
+# http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad\.php|\/wbapplua\/wbpullad\.lua) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博及微博国际版去SDK广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+# 微博国际版趋势顶部卡片去广告
+# http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版趋势顶部卡片去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+# 微博国际版用户中心
+# http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版用户中心, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
+
 
 [Rule]
 DOMAIN-SUFFIX,adstrategy.biz.weibo.com,REJECT

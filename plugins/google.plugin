@@ -1,26 +1,12 @@
-[URL Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) - reject
-^https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost - reject
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)&ctier=L(&.+) $1&ctier=A$2 302
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+#!name = Google
+#!openUrl =
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Google.png
 
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
-^https?:\/\/www\.youtube\.com\/youtubei\/v\d{1}\/log\_event\? - reject
-^https?:\/\/.+.youtube.com\/get_midroll_ - reject
-^https?:\/\/.+.youtube.com\/_get_ads - reject
-^https?:\/\/stats.tubemogul.com\/stats\/ - reject
-^https?:\/\/youtubei.googleapis.com\/.+ad_break - reject
-^https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log) - reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat - reject
-^https?:\/\/s0.2mdn.net\/ads\/ - reject
-^https?:\/\/premiumyva.appspot.com\/vmclickstoadvertisersite - reject
-^https?:\/\/play\.google\.com\/log\? - reject
+[URL Rewrite]
 
 [Script]
-# http-response ^https:\/\/www.youtube.com\/api\/timedtext.+ script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js, requires-body=true, tag=youtube-dualsub
-# http-request ^https:\/\/setting.youtube.com\/\?action=(g|s)et script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js, requires-body=true, tag=youtube-dualsub-setting
+http-response ^https?:\/\/www\.google\..*\/search script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/endlessgoogle.js, requires-body=true, tag=google自动翻页, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Google.png
 
 [MITM]
-hostname = -redirector*.googlevideo.com,*.googlevideo.com,*.youtube.com,*.play.google.com
+hostname=www.google.*,

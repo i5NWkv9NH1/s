@@ -3,10 +3,13 @@
 ^https?:\/\/capis\.didapinche\.com\/carpool\/base\/passenger\/home\/info\/new\? - reject
 ^https?:\/\/capis\.didapinche\.com\/adbase\/deliver\? - reject
 ^https?:\/\/capis\.didapinche\.com\/app\/adstat\? - reject
-
+^https?:\/\/www\.didapinche\.com\/app\/adstat\? - reject
+^https?:\/\/capis\-\d{1}\.didapinche\.com\/adbase\/deliver\? - reject
+^https?:\/\/capis\-\d{1}\.didapinche\.com\/ad\/cx\/startup\? - reject
 
 [Rule]
+DOMAIN-SUFFIX,pluto-apm.didapinche.com,REJECT
 DOMAIN-SUFFIX,harley-t.didapinche.com,REJECT
 
 [MITM]
-hostname = *.capis.didapinche.com
+hostname = *.capis.didapinche.com, capis*.didapinche.com,www.didapinche.com
