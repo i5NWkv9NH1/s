@@ -5,13 +5,22 @@
  */
 
 let body = JSON.parse($response.body)
+let url = $request.url
 
-body.data.ad_list = []
-body.data.gdt_video_ad_ios = []
-body.data.gdt_video_ad_android.horizontal_video = []
-body.data.gdt_video_ad_android.vertical_video = []
-body.data.display_ad = null
-body.data.ad_type = null
+console.log(new URL(url).searchParams.getAll('a'))
+
+if (
+  url.indexOf('a=get_coopen_ads') !== -1 ||
+  url.indexOf('c=ad') !== -1 ||
+  url.indexOf('slot=coopen') !== -1
+) {
+  body.data.ad_list = []
+  body.data.gdt_video_ad_ios = []
+  body.data.gdt_video_ad_android.horizontal_video = []
+  body.data.gdt_video_ad_android.vertical_video = []
+  body.data.display_ad = null
+  body.data.ad_type = null
+}
 
 body = JSON.stringify(body)
 
