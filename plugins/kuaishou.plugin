@@ -1,0 +1,10 @@
+[URL Rewrite]
+
+
+[Rule]
+DOMAIN-SUFFIX,gdfpsec.ksapisrv.com,REJECT
+DOMAIN-SUFFIX,gdfp.gifshow.com,REJECT
+
+
+[MITM]
+

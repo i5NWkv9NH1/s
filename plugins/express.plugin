@@ -1,0 +1,17 @@
+# 顺丰
+[Script]
+http-response ^https?:\/\/ccsp\-egmas\.sf\-express\.com\/cx\-app\-base\/base\/app\/messageCenter\/queryMessageCenterList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/express/queryMessageCenterList.js, requires-body=true, tag=顺丰-消息列表
+http-response ^https?:\/\/ccsp\-egmas\.sf\-express\.com\/cx\-app\-base\/base\/app\/ad\/queryInfoFlow script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/express/queryInfoFlow.js, requires-body=true, tag=顺丰-首页信息流
+http-response ^https?:\/\/ccsp\-egmas\.sf\-express\.com\/cx\-app\-base\/base\/app\/bms\/queryRecommend script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/express/queryRecommend.js, requires-body=true, tag=顺丰-首页-推荐卡片
+http-response ^https?:\/\/ccsp\-egmas\.sf\-express\.com\/cx\-app\-base\/base\/app\/user\/queryModuleConfscript-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/express/queryModuleConfscript.js, requires-body=true, tag=顺丰-寄快递-卡片
+http-response ^https?:\/\/ccsp\-egmas\.sf\-express\.com\/cx\-app\-base\/base\/app\/user\/quryIndexConfigs script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/express/queryIndexConfigs.js, requires-body=true, tag=顺丰-我的-卡片
+
+[URL Rewrite]
+^https?:\/\/ubs\.sf\-express\.com\/sa\? - REJECT
+^https?:\/\/ucmp\-static\.sf\-express\.com\/sfoss\/ad\-act\/infoflow\/* - REJECT
+
+[Rule]
+
+
+[MITM]
+hostname = *.mars.jd.com,ucmp-static.sf-express.com,ccsp-egmas.sf-express.com

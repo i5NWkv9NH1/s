@@ -1,0 +1,5 @@
+[Script]
+http-response ^https?:\/\/api\.raindrop\.io\/v\d{1}\/user script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/raindrop.js, requires-body=true, tag=raindrop-vip
+
+[MITM]
+hostname = api.raindrop.io
