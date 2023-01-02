@@ -2,7 +2,7 @@
 ^https?://[^/]+/2/logservice/(servijce|attach)(?:/?|/?#.*)$ - reject
 
 [Script]
-http-response weibointl script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/ad-weibointl.js, requires-body=true, tag=weibo-ad-weibointl
+http-response ^https:\/\/api\.weibo\.cn\/2\/ad\/weibointl\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/ad-weibointl.js, requires-body=true, tag=weibo-ad-weibointl
 http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/get_coopen_ads.js, requires-body=true, tag=weibo-get_coopen_ads
 http-response ^https?:\/\/api\.weibo\.cn\/\d{1}\/statuses\/friends\/timeline script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/statuses_friends_timeline.js, requires-body=true, tag=weibo-timeline-ads
 
