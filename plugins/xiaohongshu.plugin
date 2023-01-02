@@ -10,6 +10,7 @@ http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_serv
 DOMAIN-SUFFIX,crash.xiaohongshu.com,REJECT
 DOMAIN-SUFFIX,t2.xiaohongshu.com,REJECT
 DOMAIN-SUFFIX,lng.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,as.xiaohongshu.com,REJECT
 
 [URL Rewrite]
 ^https?:\/\/www\.xiaohongshu\.com\/speedtest - reject
