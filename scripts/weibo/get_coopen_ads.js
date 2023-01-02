@@ -7,7 +7,7 @@
 let body = JSON.parse($response.body)
 let url = $request.url
 
-console.log(new URL(url).searchParams.getAll('a'))
+console.log(url.replace('https://weibointl.api.weibo.cn/portal.php?', ''))
 
 if (
   url.indexOf('a=get_coopen_ads') !== -1 ||
