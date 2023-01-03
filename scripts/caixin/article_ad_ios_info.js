@@ -7,6 +7,9 @@
 let body = JSON.parse($response.body)
 
 body.data.list520_video = []
+body.data.list_audio = []
+body.data.list513_rate.ad_id = 0
+body.data.list513_rate.ad_rate = 0
 
 body = JSON.stringify(body)
 
