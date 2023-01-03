@@ -1,0 +1,25 @@
+#!name=财新周刊
+#!icon=https://file.caixin.com/webchannel/all/img/logo.png
+
+[Script]
+http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/specialModuleType\/getAll script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/specialModuleType.js, requires-body=true, binary-body-mode=true, tag=财新周刊-specialModuleType
+http-response ^https:\/\/mappsv\d{1}\.caixin\.com\/index\_page\_v\d{1}\/operate\_index\_page\_\d{1}.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/operate_index_page.js, requires-body=true, binary-body-mode=true, tag=财新周刊-首页
+http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/caixinapp\/appinfo script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/appinfo.js, requires-body=true, binary-body-mode=true, tag=财新周刊-app配置
+http-response ^https:\/\/mappsv\d{1}\.caixin\.com\/channelv\d{1}\/article\_ad\_ios\_info\.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/article_ad_ios_info.js, requires-body=true, binary-body-mode=true, tag=财新周刊-广告
+http-response ^https:\/\/gateway\.caixin\.com\/api\/push\/pushTag\/getUserTags script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/getUserTags.js, requires-body=true, binary-body-mode=true, tag=财新周刊-用户标签
+http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/validate\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/validate.js, requires-body=true, binary-body-mode=true, tag=财新周刊-用户验证
+http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/validateAudioAuth\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/validateAudioAuth.js, requires-body=true, binary-body-mode=true, tag=财新周刊-用户标签
+
+
+[URL Rewrite]
+^https:\/\/gateway\.caixin\.com\/api\/stat\/v\d{1}\/client\_data\/from\_app - reject
+^https:\/\/gateway\.caixin\.com\/api\/app\-api\/cxAdInfo\/selectIndexAdInfo - reject
+
+[Rule]
+DOMAIN-SUFFIX,apollo.caixin.com, reject
+DOMAIN-SUFFIX,volceapplog.com, reject
+DOMAIN-SUFFIX,klink.volceapplog, reject
+DOMAIN-SUFFIX,toblog.volceapplog.com, reject
+
+[MITM]
+hostname=gateway.caixin.com,mappsv*.caixin.com

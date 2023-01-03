@@ -3,7 +3,7 @@
 ^https:\/\/dr\.netease\.im\/\d{1}\.gif\? - reject
 
 [Rule]
-DOMAIN-SUFFIX,statistic.live.126.net - reject
+DOMAIN-SUFFIX,statistic.live.126.net, reject
 
 [MITM]
 hostname=dr.netease.im
