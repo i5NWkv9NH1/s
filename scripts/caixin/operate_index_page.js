@@ -4,8 +4,6 @@
  * @date 2021-09-22
  */
 
-let body = JSON.parse($response.body)
-
 // let body = $response.body
 console.log(Object.keys(body.data))
 
