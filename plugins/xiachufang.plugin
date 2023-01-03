@@ -1,7 +1,6 @@
 [URL Rewrite]
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/homepage1810\/init_page.json? _ reject
-^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad* _ reject
-^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/lookup_hybrid_ad_by_slot_name\.json _ reject
+^https?:\/\/api\.xiachufang\.com\/v\d{1}\/ad\/lookup* _ reject
 ^https?:\/\/api\.xiachufang\.com\/v\d{1}\/events\/paged\_user\_created\_events\.json _ reject
 
 [Script]
@@ -13,4 +12,4 @@ DOMAIN-SUFFIX,track.xiachufang.com,REJECT
 DOMAIN-SUFFIX,trackbeat.xiachufang.com,REJECT
 
 [MITM]
-hostname = *.xiachufang.com
+hostname = api.xiachufang.com
