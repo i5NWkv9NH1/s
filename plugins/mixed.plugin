@@ -18,7 +18,8 @@ http-response ^https>:\/\/zebra\.maka\.im\/api\/user\/info script-path=https://r
 
 
 #! 正在使用
-http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/documents.js, requires-body=true, tag=pdf expert
+http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/documents.js, requires-body=true, tag=documents
+http-response ^https?:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) script-path=https://hub.nange.cn/Script/Readdle/PDFExpert.js, requires-body=true, tag=pdf-expert
 http-response ^https:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/faceapp.js, requires-body=true, tag=FACE-vip
 http-response ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js, requires-body=true, tag=轻颜相机-vip
 # http-response ^https://mall.zuoyebang.com/mall/goods/audio/voice/list?.+ script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js, requires-body=true, tag=作业帮付费音频解锁
