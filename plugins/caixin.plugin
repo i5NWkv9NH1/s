@@ -9,7 +9,7 @@ http-response ^https:\/\/mappsv\d{1}\.caixin\.com\/channelv\d{1}\/article\_ad\_i
 http-response ^https:\/\/gateway\.caixin\.com\/api\/push\/pushTag\/getUserTags script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/getUserTags.js, requires-body=true,  tag=财新周刊-用户标签
 http-response ^https:\/\/gateway\.caixin\.com\/api\/usertag\/api\/getUserTag\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/getUserTag.js, requires-body=true,  tag=财新周刊-用户标签2
 http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/validate\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/validate.js, requires-body=true,  tag=财新周刊-用户验证
-http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/validateAudioAuth\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/validateAudioAuth.js, requires-body=true,  tag=财新周刊-用户标签
+http-response ^https:\/\/gateway\.caixin\.com\/api\/app\-api\/auth\/validateAudioAuth\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/caixin/validateAudioAuth.js, requires-body=true,  tag=财新周刊-用户音频验证
 
 
 [URL Rewrite]
