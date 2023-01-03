@@ -4,7 +4,9 @@
  * @date 2021-09-22
  */
 
-console.log($response.body)
+console.log(typeof $response.body)
+console.log(typeof $response.body.data.ios_ad_513)
+console.log(typeof $response.body.data.list)
 
 let body
 
