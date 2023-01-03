@@ -3,7 +3,6 @@
  * @url ^https:\/\/mappsv\d{1}\.caixin\.com\/index\_page\_v\d{1}\/operate\_index\_page\_\d{1}.json
  * @date 2021-09-22
  */
-console.log($response.body)
 
 let body = JSON.parse($response.body)
 
