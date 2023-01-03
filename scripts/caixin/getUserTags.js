@@ -3,6 +3,7 @@
  * @url ^https:\/\/gateway\.caixin\.com\/api\/push\/pushTag\/getUserTags
  * @date 2021-09-22
  */
+console.log($response.body)
 
 let body = JSON.parse($response.body)
 

@@ -4,6 +4,7 @@
  * @date 2021-09-22
  */
 
+console.log($response.body)
 let body = JSON.parse($response.body)
 
 body.data.integralGroup.isShow = false
