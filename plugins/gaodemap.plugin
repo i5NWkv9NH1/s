@@ -8,7 +8,7 @@ http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull\d{1}\? script-path=ht
 
 
 [URL Rewrite]
-^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main\-page\? - reject
+# ^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main\-page\? - reject
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/rdr\/log\/upload\? - reject
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/alc\/collect\? - reject
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/location\/collection\/autodata\/stat\? - reject
