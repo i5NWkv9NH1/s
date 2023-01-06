@@ -3,8 +3,8 @@
 
 [Script]
 http-response ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash\_screen\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/splash_screen.js, requires-body=true, tag=高德地图-开屏广告
-http-response ^https:\/\/m5\-zb\.amap\.com\/ws\/vip\/user\-member\-info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/user-member-info.js, requires-body=true, tag=高德地图-用户vip
-http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull\d{1}\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/msgbox.js, requires-body=true, tag=高德地图-消息
+# http-response ^https:\/\/m5\-zb\.amap\.com\/ws\/vip\/user\-member\-info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/user-member-info.js, requires-body=true, tag=高德地图-用户vip
+# http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull\d{1}\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/msgbox.js, requires-body=true, tag=高德地图-消息
 
 
 [URL Rewrite]
