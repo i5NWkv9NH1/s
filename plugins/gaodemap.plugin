@@ -1,5 +1,5 @@
-!name=高德地图
-!icon=https://play-lh.googleusercontent.com/l3jypy2cfNXc6R3vWstSgWHqZz-WKn5K3HyDSjDehwoh8rrsXan1byG45TQzDTkZ3azG
+#!name=高德地图
+#!icon=https://play-lh.googleusercontent.com/l3jypy2cfNXc6R3vWstSgWHqZz-WKn5K3HyDSjDehwoh8rrsXan1byG45TQzDTkZ3azG
 
 [Script]
 http-response ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash\_screen\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/splash_screen.js, requires-body=true, tag=高德地图-开屏广告
