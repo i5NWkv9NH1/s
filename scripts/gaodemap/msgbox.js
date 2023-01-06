@@ -4,13 +4,13 @@
  * @date 2021-09-22
  */
 
- let body = $response.body;
- body = JSON.parse(body);
+let body = $response.body
+body = JSON.parse(body)
 
- body.msgs = []
+body.msgs = []
 
- body = JSON.stringify(body);
+body = JSON.stringify(body)
 
- $done({
-	 body
- })
+$done({
+  body
+})
