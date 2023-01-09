@@ -195,7 +195,6 @@ DOMAIN-SUFFIX,qzs.qq.com
 DOMAIN-SUFFIX,mi.gdt.qq.com
 DOMAIN-SUFFIX,sdk.e.qq.com
 DOMAIN-SUFFIX,logs.game.qq.com
-DOMAIN-SUFFIX,idata.game.qq.com
 DOMAIN-SUFFIX,researchnet.qqlive.qq.com
 DOMAIN-SUFFIX,ios.rqd.qq.com
 DOMAIN-SUFFIX,wup.browser.qq.com
@@ -349,11 +348,9 @@ DOMAIN-SUFFIX,armmf.adobe.com
 DOMAIN-SUFFIX,rcxfm.com
 DOMAIN-SUFFIX,fs_report_doctor.qq.com
 DOMAIN-SUFFIX,skeyword.browser.qq.com
-DOMAIN-SUFFIX,ibb.co
 DOMAIN-SUFFIX,newtab.browser.qq.com
 DOMAIN-SUFFIX,local_p2p.qq.com
 DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
-DOMAIN-SUFFIX,rail.tgp.qq.com
 DOMAIN-SUFFIX,xuanfengnet.qq.com
 DOMAIN-SUFFIX,cfg.dnf.qq.com
 DOMAIN-SUFFIX,ad.10010.com
@@ -373,7 +370,6 @@ DOMAIN-SUFFIX,postmanlabs.com
 DOMAIN-SUFFIX,www.ccleaner.com
 DOMAIN-SUFFIX,getpostman.com
 DOMAIN-SUFFIX,datamore.qq.com
-DOMAIN-SUFFIX,ams.game.qq.com
 DOMAIN-SUFFIX,idata.qq.com
 DOMAIN-SUFFIX,tgp.qq.com
 DOMAIN-SUFFIX,netbarsvr.iigw.qq.com
@@ -511,7 +507,7 @@ DOMAIN-SUFFIX,dm.toutiao.com
 DOMAIN-SUFFIX,stat.centbrowser.com
 DOMAIN-SUFFIX,jb.tn
 DOMAIN-SUFFIX,iya.app
-DOMAIN-SUFFIX,  - sdkauth.hpplay.cn
+DOMAIN-SUFFIX,sdkauth.hpplay.cn
 DOMAIN-SUFFIX,flume.xinhuaapp.com
 DOMAIN-SUFFIX,lgm.accuratead.cn
 DOMAIN-SUFFIX,dot.xinhuazhiyun.com
@@ -520,7 +516,6 @@ DOMAIN-SUFFIX,data-api.fenbi.com
 DOMAIN-SUFFIX,adstatic.peopleapp.com
 DOMAIN-SUFFIX,data.pdnews.cn
 DOMAIN-SUFFIX,web-player-tracker.biliapi.net
-DOMAIN-SUFFIX,ied-tqos-tgp.qq.com
 DOMAIN-SUFFIX,ntp.msn.com
 DOMAIN-SUFFIX,aria.microsoft.com
 DOMAIN-SUFFIX,creport.start.qq.com
@@ -673,3 +668,4 @@ DOMAIN-SUFFIX,086qdaa.com
 DOMAIN-SUFFIX,066hjkl.com
 DOMAIN-SUFFIX,078uijy.com
 DOMAIN-SUFFIX,renzhongjiaoyu.xyz
+DOMAIN-SUFFIX,sa.aunload.com
