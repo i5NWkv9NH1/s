@@ -1,8 +1,8 @@
 [Script]
 http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/index? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/index.js, requires-body=true, tag=公考雷达-首页
-http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/login\/captcha\/verify script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/user.js, requires-body=true, tag=公考雷达-用户验证
-http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/login\/getUserInfo? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/user.js, requires-body=true, tag=公考雷达-用户信息
-http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\/my\/index\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/my.js, requires-body=true, tag=公考雷达-my
+http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/user\/vip\/product script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/product.js, requires-body=true, tag=公考雷达-product
+# http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/login\/getUserInfo? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/user.js, requires-body=true, tag=公考雷达-用户信息
+# http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\/my\/index\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/my.js, requires-body=true, tag=公考雷达-my
 
 
 
