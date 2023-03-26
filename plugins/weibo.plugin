@@ -8,7 +8,7 @@
 [URL Rewrite]
 ^https?://[^/]+/2/logservice/(servijce|attach)(?:/?|/?#.*)$ - reject-200
 ^https?:\/\/api\.weibo\.cn\/\d{1}\/sdk\/union\_config - reject-200
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads - reject-200
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads - reject-200
 
 # 微博国际版热搜
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users reject-dict
@@ -18,14 +18,14 @@
 # ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest reject-dict
 # 微博_Spotlight
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight reject-dict
-
-
+# 微博国际版 User
 
 [Script]
+# 微博国际版用户信息
+http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=open\_app\&ct\=user script-path = https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/open_app_user.js, requires-body=true, tag =微博国际版用户信息
+http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/get_coopen_ads.js, requires-body=true, tag=微博国际版开屏广告
 # http-response ^https:\/\/api\.weibo\.cn\/2\/ad\/weibointl\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/ad-weibointl.js, requires-body=true, tag=weibo-ad-weibointl
-# http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/get_coopen_ads.js, requires-body=true, tag=weibo-get_coopen_ads
 http-response ^https?:\/\/api\.weibo\.cn\/\d{1}\/statuses\/friends\/timeline script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/weibo/statuses_friends_timeline.js, requires-body=true, tag=weibo-timeline-ads
-
 # 微博国际版屏蔽开屏广告
 # http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版屏蔽开屏广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
 # 微博及微博国际版去SDK广告
@@ -34,7 +34,6 @@ http-response ^https?:\/\/api\.weibo\.cn\/\d{1}\/statuses\/friends\/timeline scr
 # http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版趋势顶部卡片去广告, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
 # 微博国际版用户中心
 # http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 微博国际版用户中心, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo_intl.png
-
 
 [Rule]
 DOMAIN-SUFFIX,adstrategy.biz.weibo.com,REJECT

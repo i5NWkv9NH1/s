@@ -18,10 +18,11 @@ DOMAIN-SUFFIX,as.xiaohongshu.com,REJECT
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/ads\/resource? - reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/huidu\/* - reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed\/client\_downgrade\/report - reject
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/permission\/report - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system\_service\/permission\/report - reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/metrics\_report - reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/widgets - reject
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/splash\_config - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system\_service\/splash\_config - reject
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system\_service/popup\_window? - reject
 
 [MITM]
 hostname = www.xiaohongshu.com,edith.xiaohongshu.com

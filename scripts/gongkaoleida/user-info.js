@@ -1,7 +1,6 @@
 /**
  * @description vip
- * @url ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/login\/captcha\/verify
- * @url ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/login\/getUserInfo?
+ * @url ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/user\/getInfo?
  */
 
  let body = JSON.parse($response.body);

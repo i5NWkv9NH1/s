@@ -1,0 +1,23 @@
+#!name=联通
+#!icon=http://pic.616pic.com/ys_img/00/05/41/jjHmMinCK4.jpg
+
+[Script]
+http-response ^https?:\/\/m.client.10010.com\/mobileService/customer/getclientconfig.htm? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/getclientconfig.js, requires-body=true, timeout=10, tag=10010-getclientconfig
+http-response ^https?:\/\/m.client.10010.com\/mobileService/uniAdmsInterface\/getHomePageAd script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/getHomePageAd.js, requires-body=true, timeout=10, tag=10010-getHomePageAd
+http-response ^https?:\/\/m.client.10010.com\/mobileserviceNine\/homefusion\/fuInter script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/homefusion-fuInter.js, requires-body=true, timeout=10, tag=10010-homefusion-fuInter
+http-response ^https?:\/\/m.client.10010.com\/mobileserviceNine\/homefusion\/selTips script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/homefusion-selTips.js, requires-body=true, timeout=10, tag=10010-homefusion-selTips
+http-response ^https?:\/\/m.client.10010.com\/mobileService/query\/querySmartBizHome.htm? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/querySmartBizHome.js, requires-body=true, timeout=10, tag=10010-querySmartBizHome
+http-response ^https?:\/\/m.client.10010.com\/mobileService\/customer\/indexExpressNewsAndRecommend.htm script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/indexExpressNewsAndRecommend.js, requires-body=true, timeout=10, tag=10010-indexExpressNewsAndRecommend
+http-response ^https?:\/\/m.client.10010.com\/mobileserviceNine\/v\d{1}\/nav\/home? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/nav.js, requires-body=true, timeout=10, tag=10010-nav
+http-response ^https?:\/\/m.10010.com\/decoration\-data\/scaffold\/queryNewHomePageidShowData? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/queryNewHomePageidShowData.js, requires-body=true, timeout=10, tag=10010-queryNewHomePageidShowData
+http-response ^https?:\/\/m.client.10010.com\/mobileService\/query\/querySmartBizHome.htm? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/10010/querySmartBizHome.js, requires-body=true, timeout=10, tag=10010-querySmartBizHome
+
+[URL Rewrite]
+
+[Rule]
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
+DOMAIN-SUFFIX,analytics2.10010.com,REJECT
+DOMAIN-SUFFIX,smartad.10010.com,REJECT
+DOMAIN-SUFFIX,ad.10010.com,REJECT
+[MITM]
+hostname=m.client.10010.com,m.10010.com

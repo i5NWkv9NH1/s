@@ -65,6 +65,9 @@ http-response ^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) scr
 ^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\? - reject-200
 ^https?:\/\/api\.anythinktech\.com\/v\d{1}\/open\/app - reject-200
 
+# 瑞幸
+^https?:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew? - reject
+
 [MITM]
 hostname = mp.weixin.qq.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,api.m.jd.com,avoscloud.com,biz.caiyunapp.com,weixin110.qq.com,api.faceapp.io,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,book.haitunwallet.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,api.dushu.io,zebra.maka.im,ipadcms.caixin.com,panel.getdailyart.com,cs.kuso.xyz,api.tidal.com,*.aoscdn.com,ios-api-2.duolingo.cn,api.neuralprisma.com,api.neuralprisma.com,cn.pornhubpremium.com,*.pornhubpremium.com,*.wallpaperscraft.com,*.*xima*.*, *.xmcdn.com,
-*.kuwo.cn,yimuapp.com,buy.itunes.apple.com,app.api.versa-ai.com,api.feidee.net, userapi.feidee.net, tg.feidee.com, community.feidee.com,api.meiease.cn,apiios.xiangha.com, 39.97.157.167,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,*.wtzw.com,api.infzm.com,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com,*.gotokeep.com, res.hongyibo.com.cn,api.anythinktech.com
+*.kuwo.cn,yimuapp.com,buy.itunes.apple.com,app.api.versa-ai.com,api.feidee.net, userapi.feidee.net, tg.feidee.com, community.feidee.com,api.meiease.cn,apiios.xiangha.com, 39.97.157.167,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,*.wtzw.com,api.infzm.com,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com,*.gotokeep.com, res.hongyibo.com.cn,api.anythinktech.com,capi.lkcoffee.com
