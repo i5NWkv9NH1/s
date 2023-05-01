@@ -14,7 +14,7 @@ let body = JSON.parse($response.body);
  */
 console.log('pinduoduo:: starting match');
 switch (url) {
-  case url.match(/homepoage\/hub/)?.input: {
+  case url.match(/homepage\/hub/)?.input: {
     console.log('pingduoduo:: match homepage hub');
     const keywords = ['首页', '聊天', '个人中心'];
 
