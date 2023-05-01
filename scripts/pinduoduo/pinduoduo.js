@@ -12,7 +12,7 @@ let body = JSON.parse($response.body);
  * @match ^https?:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\?
  * @match ^https?:\/\/api\.pinduoduo\.com\/api\/cappuccino\/splash\?
  */
-
+console.log('pinduoduo:: starting match');
 switch (url) {
   case url.match(/homepoage\/hub/)?.input: {
     console.log('pingduoduo:: match homepage hub');
@@ -38,6 +38,10 @@ switch (url) {
     );
     break;
   }
+  default: {
+    console.log('pinduoduo:: match default');
+    break;
+  }
   //? startingad plugin
   // case url.match(/splash/)?.input: {
   //   body.splash_list = [];
@@ -45,4 +49,5 @@ switch (url) {
   // }
 }
 
+console.log('pinduoduo:: match done');
 $done({ body: JSON.stringify(body) });
