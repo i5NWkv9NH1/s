@@ -1,5 +1,5 @@
 #!name = raindrop
-#!icon = https://raindrop.io/_next/static/images/icon-383cf1a6e834bf67e6c58ec01945ae1c.svg
+#!icon = https://app.raindrop.io/assets/icon_180.fbd99491d9a0dce9c71143df644bd20a.png
 [Script]
 http-response ^https?:\/\/api\.raindrop\.io\/v\d{1}\/user script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/raindrop/raindrop.js, requires-body=true, tag=raindrop-vip
 

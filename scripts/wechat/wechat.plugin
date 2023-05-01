@@ -1,5 +1,5 @@
 #!name = 微信
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/WeChat.png
+#!icon = https://img.icons8.com/?size=512&id=g6K6MWJPKeyk&format=png
 
 [URL Rewrite]
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/repor* - reject-dict
