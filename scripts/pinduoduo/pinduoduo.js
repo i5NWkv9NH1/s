@@ -23,14 +23,14 @@ switch (url) {
       (item) => item.tab_id === 1
     );
     body.result.bottom_tabs = body.result.bottom_tabs.filter((item) => {
-      if (keywords.indexOf(item.title) !== -1) {
+      if (keywords.indexOf(item.title) === -1) {
         return false;
       }
       return true;
     });
     body.result.buffer_bottom_tabs = body.result.buffer_bottom_tabs.filter(
       (item) => {
-        if (keywords.indexOf(item.title) !== -1) {
+        if (keywords.indexOf(item.title) === -1) {
           return false;
         }
         return true;
