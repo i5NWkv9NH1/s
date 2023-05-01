@@ -1,0 +1,20 @@
+#!name = 人民日报
+#!icon = http://www.people.com.cn/img/2020peopleindex/img/logo_red.png
+
+[URL Rewrite]
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics - reject-dict
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag - reject-dict
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv - reject-dict
+
+[Script]
+http-response ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp/peopleapp.js, requires-body=true, tag=人民日报-首页去广告
+http-response ^https?:\/\/app\.peopleapp\.com\Api\/\d{3}\/UserLevelApi\/experienceIncrease script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp/peopleapp.js, requires-body=true, tag=人民日报-用户等级
+http-response ^https?:\/\/app\.peopleapp\.com\Api\/\d{3}\/MineApi\/getUserInfo script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp/peopleapp.js, requires-body=true, tag=人民日报-获取用户信息
+http-response ^https?:\/\/app\.peopleapp\.com\Api\/\d{3}\/HomeApi\/showCategory script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp/peopleapp.js, requires-body=true, tag=人民日报-App分类
+
+
+[Rule]
+DOMAIN-SUFFIX,stat.peopleapp.com,REJECT
+
+[MITM]
+hostname = app.peopleapp.com

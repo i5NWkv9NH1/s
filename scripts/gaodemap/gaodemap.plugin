@@ -1,0 +1,22 @@
+#!name = 高德地图
+#!icon = https://lbs.amap.com/public/img/logo_2022_m_2x.png
+
+[Script]
+http-response ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash\_screen\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/gaodemap.js, requires-body=true, tag=高德地图-开屏广告
+# http-response ^https:\/\/m5\-zb\.amap\.com\/ws\/vip\/user\-member\-info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/gaodemap.js, requires-body=true, tag=高德地图-用户vip
+# http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull\d{1}\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gaodemap/gaodemap.js, requires-body=true, tag=高德地图-消息
+
+
+[URL Rewrite]
+# ^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main\-page\? - reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/rdr\/log\/upload\? - reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/alc\/collect\? - reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/location\/collection\/autodata\/stat\? - reject
+
+[Rule]
+DOMAIN-SUFFIX,optimus-ads.amap,REJECT
+DOMAIN-SUFFIX,amap-aos-info-nogw.amap.com,REJECT
+DOMAIN-SUFFIX,awaken.amap.com, reject
+
+[MITM]
+hostname = m5.amap.com, sns.amap.com, m5*.amap.com

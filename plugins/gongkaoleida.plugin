@@ -1,3 +1,6 @@
+#!name = 公考雷达
+#!icon = https://www.gongkaoleida.com/home/images/must/logo.png
+
 [Script]
 http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/index? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/index.js, requires-body=true, tag=公考雷达-首页
 http-response ^https?:\/\/api\.gongkaoleida\.com\/api\/v\d{1}\_\d{1}\_\d{1}\/user\/getInfo? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/gongkaoleida/user-info.js, requires-body=true, tag=公考雷达-用户信息

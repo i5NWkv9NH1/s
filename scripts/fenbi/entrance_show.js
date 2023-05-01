@@ -3,12 +3,11 @@
  * @url ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show?
  */
 
+let body = JSON.parse($response.body);
 
- let body = JSON.parse($response.body);
+body.data.show = false;
 
-body.data.show = false
-
- body = JSON.stringify(body);
- $done({
-		 body
- });
+body = JSON.stringify(body);
+$done({
+  body
+});

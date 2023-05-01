@@ -1,0 +1,47 @@
+#!name = 百度网盘、百度App
+#!desc = 过滤广告, 页面组件等等
+#!icon = https://img.icons8.com?size=512&id=25412&format=png
+
+[Script]
+## startingad.plugin
+# http-response ^https?:\/\/pan\.baidu\.com\/act\/v\d{1}\/welfare\/list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/welfare-list.js, requires-body=true, tag=百度网盘-福利广告
+# http-response ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/activityentry.js, requires-body=true, tag=百度网盘-弹窗
+# http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/adv.js, requires-body=true, tag=百度网盘-事件广告
+# http-response ^https?:\/\/pan\.baidu\.com\/act\/v\d{1}\/bchannel\/list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/bchannel-list.js, requires-body=true, tag=百度网盘-频道广告
+
+## remote && old
+# http-response ^https?:\/\/pan\.baidu\.com\/pmall\/points\/goodslist\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/goodslist.js, requires-body=true, tag=百度网盘-商品列表
+# http-response ^https?:\/\/pan\.baidu\.com\/point\/product\/optlist\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/optlist.js, requires-body=true, tag=百度网盘-定制广告
+# http-response ^https?:\/\/pan\.baidu\.com\/act\/v\d{1}\/membergrow\/list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/netdisk/membergrow-list.js, requires-body=true, tag=百度网盘-用户兑换广告
+
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-系统配置
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/proxy\/guide\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-新人礼
+http-response ^https:\/\/pan\.baidu\.com\/aipic\/tags\/getconfig\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-相册标签
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/xpan\/smartprogram\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-小程序
+http-response ^https?:\/\/pan\.baidu\.com\/api\/usercfg\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-用户卡片
+http-response ^https?:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-任务列表
+http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path=https://hub.nange.cn/Script/Baidu/BaiduCloud.js, requires-body=true, requires-body=true ,tag=百度网盘-会员
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getconfig\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/baidu/baidu.js, requires-body=true, tag=百度网盘-配置
+
+[URL Rewrite]
+^https?://[^/]+/rewardappmsgreport(?:/?|/?#.*)$ - reject
+^https?://[^/]+/gs.gif?(?:/?|/?#.*)$ - reject
+^https?://[^/]+/\d{1}/logservice/(service|attach)(?:/?|/?#.*)$ - reject
+^https?://[^/]+/c/f/form/getAdInfo(?:/?|/?#.*)$ - reject
+^https?://[^/]+/c/s/splashSchedule(?:/?|/?#.*)$ - reject
+^https?://[^/]+/baidu.php(?:/?|/?#.*)$ - reject
+^https?://[^/]+/c/s/inpv(?:/?|/?#.*)$ - reject
+^https?://[^/]+/c/s/sync(?:/?|/?#.*)$ - reject
+^https?://[^/]+/c/s/newlog(?:/?|/?#.*)$ - reject
+^https?://[^/]+/c/s/pv(?:/?|/?#.*)$ - reject
+^https?:\/\/voice\.baidu\.com\/x\.gif\? - reject
+^https?:\/\/pan\.baidu\.com\/bpapi\/analytics\? - reject
+^https?:\/\/pan\.baidu\.com\/api\/analytics\? - reject
+^https?:\/\/afdconf\.baidu\.com\/afd\/platform\? - reject
+^https?:\/\/novelapi\.baidu\.com\/novelopenapi\/commmon\/report\? - reject
+
+[Rule]
+DOMAIN-SUFFIX,ufosdk.baidu.com,REJECT
+
+[MITM]
+hostname = *.baidu.com,mbd.baidu.com, voice.baidu.com,novelapi.baidu.com,pan.baidu.com

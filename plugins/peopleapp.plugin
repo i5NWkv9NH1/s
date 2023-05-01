@@ -1,10 +1,10 @@
 [URL Rewrite]
-^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics - reject
-^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag - reject
-^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv - reject
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics - reject-dict
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getAdvertImag - reject-dict
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/adv - reject-dict
 
 [Script]
-http-response ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp.js, requires-body=true, tag=peopleapp-ad
+http-response ^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/peopleapp.js, requires-body=true, tag=人民日报-首页去广告
 
 [Rule]
 DOMAIN-SUFFIX,stat.peopleapp.com,REJECT

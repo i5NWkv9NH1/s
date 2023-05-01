@@ -1,0 +1,18 @@
+#!name = WPS
+#!icon = https://website-prod.cache.wpscdn.com/img/logo_normal.4e969ab.svg
+[Script]
+# http-response ^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSDocerVIPuserCrack.js, requires-body=true, tag=wps-vip
+# http-request ^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) request-header=true https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSDocerVIPowerCrack.js
+
+http-response ^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$ script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WPSOffice/Script/WPS.js, requires-body=true, timeout=10, tag=WPS会员-overview
+http-response ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, requires-body=true, tag=WPS会员-users
+
+[Rule]
+DOMAIN-SUFFIX,ios-push.wps.cn,REJECT
+DOMAIN-SUFFIX,ios-pay.wps.com,REJECT
+DOMAIN-SUFFIX,api-ad-adapter.wps.com,REJECT
+DOMAIN-SUFFIX,iosapi.wps.com,REJECT
+DOMAIN-SUFFIX,iospush.wps.com,REJECT
+
+[MITM]
+hostname = *account.wps.cn, *account.wps.com, *.docer.wps.*,vipapi.wps.*

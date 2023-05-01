@@ -1,0 +1,18 @@
+#!name = 中国建设银行
+#!icon = https://img.tukuppt.com/ad_preview/00/12/10/tktARd123b.jpg
+
+[Script]
+
+
+[URL Rewrite]
+^https?:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/newfin\/activity\/AD\_default\.png - reject
+^https?:\/\/buy\.shanrongmall\.com\/openAdInterface - reject-dict
+^https?:\/\/star\.xiaojukeji\.com\/golden\/stat - reject-dict
+^https?:\/\/omgup\d{1}\.xiaojukeji\.com\/api\/web\/stat - reject-dict
+^https?:\/\/touch\.ccb\.com\/po\? - reject-dict
+
+[Rule]
+DOMAIN-SUFFIX,omgup2.xiaojukeji.com,REJECT
+
+[MITM]
+hostname = image1.ccb.com,buy.shanrongmall.com,star.xiaojukeji.com,omgup*.xiaojukeji.com,touch.ccb.com

@@ -1,0 +1,46 @@
+#!name = 小红书去广告
+#!desc = 过滤小红书广告，移除图片及视频水印。
+#!icon = https://bpic.588ku.com/element_pic/18/07/04/d037a17cea4650dad0bfaf3063a9e30b.jpg
+
+[Script]
+# 搜索页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(banner|hot)_list\?? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除搜索页广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除搜索页广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除搜索页广告
+# 开屏广告
+# http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告
+# http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告
+# 信息流
+# http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除信息流广告
+# 移除图片视频水印
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v[23]\/note\/(feed|redtube|videofeed)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument=""disable_watermark":false,->"disable_watermark":true,", tag = 移除图片视频水印
+
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed\/categories? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, tag=小红书-首页tab分类
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/config? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, tag=小红书-app设置
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, tag=小红书-首页feed广告
+http-response ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/tag\/ads_engage script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, tag=小红书-广告
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system_service\/splash\_config script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, tag=小红书-开屏广告
+
+
+[Rule]
+DOMAIN-SUFFIX,crash.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,t2.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,lng.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,as.xiaohongshu.com,REJECT
+
+[URL Rewrite]
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? url reject-dict
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style\?|open\?|submit_action$) reject-dict
+^https?:\/\/www\.xiaohongshu\.com\/speedtest - reject-dict
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/ads\/apple\/record - reject-dict
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/ads\/resource? - reject-dict
+^https?:\/\/edith\.xiaohongshu\.com\/api\/huidu\/* - reject-dict
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/homefeed\/client\_downgrade\/report - reject-dict
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system\_service\/permission\/report - reject-dict
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/metrics\_report - reject-dict
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/note\/widgets - reject-dict
+# ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system\_service\/splash\_config - reject-dict
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d{1}\/system\_service/popup\_window? - reject-dict
+
+[MITM]
+hostname = www.xiaohongshu.com,edith.xiaohongshu.com
