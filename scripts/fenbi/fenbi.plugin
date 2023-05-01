@@ -1,3 +1,5 @@
+#!name = 粉笔
+#!icon = https://nodestatic.fbstatic.cn/weblts_spa_online/fenbi-wap/assets/img/fenbi-logo-bc65d8bd02.png
 [Script]
 http-response ^https?:\/\/hera\-webapp\.fenbi\.com\/iphone\/recommend\/tablist? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-发现页tab
 http-response ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/guide\_center\/guides\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-guides

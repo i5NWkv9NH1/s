@@ -15,6 +15,7 @@ let body = JSON.parse($response.body);
 
 switch (url) {
   case url.match(/homepoage\/hub/)?.input: {
+    console.log('pingduoduo:: match homepage hub');
     const keywords = ['首页', '聊天', '个人中心'];
 
     body.result.icon_set = [];
