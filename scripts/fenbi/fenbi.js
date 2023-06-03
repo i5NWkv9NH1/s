@@ -3,10 +3,10 @@
  * @desc 粉笔
  * @date 2023-05-01
  */
-const url = $request.url;
-if (!$response.body) $done({});
+const url = $request.url
+if (!$response.body) $done({})
 
-let body = JSON.parse($response.body);
+let body = JSON.parse($response.body)
 
 /**
  * @match ^https?:\/\/keapi\.fenbi\.com\/iphone\/xingce\/small\_banner\?
@@ -15,31 +15,32 @@ let body = JSON.parse($response.body);
  * @match ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/guide\_center\/guides\?
  * @match ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/my\?
  * @match ^https?:\/\/hera\-webapp\.fenbi\.com\/iphone\/recommend\/tablist?
+ * @match ^https?:\/\/tiku\.fenbi\.com\/iphone\/xingce\/banners\/v\d{1}?
  */
 switch (url) {
-  case url.match(/small\_banner/)?.input: {
-    body.data.items = [];
-    break;
+  case url.match(/small\_banner\?/)?.input: {
+    body.data.items = []
+    break
   }
   case url.match(/entrance\/show/)?.input: {
-    body.data.show = false;
-    break;
+    body.data.show = false
+    break
   }
   case url.match(/user\_member\/entry/)?.input: {
-    body.data.banners = [];
-    break;
+    body.data.banners = []
+    break
   }
   case url.match(/guides/)?.input: {
-    body.datas = [];
-    break;
+    body.datas = []
+    break
   }
   case url.match(/assistant\/my/)?.input: {
-    body.data.msgList = [];
-    body.data.show = false;
-    break;
+    body.data.msgList = []
+    body.data.show = false
+    break
   }
   case url.match(/recommend\/tablist/)?.input: {
-    body.total = 3;
+    body.total = 3
     body.datas = [
       // 移除
       // { id: 0, name: '推荐' },
@@ -47,9 +48,17 @@ switch (url) {
       { id: 2, name: '圈子' },
       { id: 5, name: '招考' },
       { id: 3, name: '关注' }
-    ];
-    break;
+    ]
+    break
+  }
+  case url.match(/iphone\/xingce\/banners\/v\d{1}/)?.input: {
+    body.banners.datas = []
+    body.banners.total = 0
+
+    body.miniBanners.total = 0
+    body.miniBanners.datas = []
+    break
   }
 }
 
-$done({ body: JSON.stringify(body) });
+$done({ body: JSON.stringify(body) })

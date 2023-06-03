@@ -1,0 +1,19 @@
+#!name = 知乎扩展
+#!icon = https://static.zhihu.com/heifetz/favicon.ico
+[Script]
+http-response ^https?:\/\/api\.zhihu\.com\/feed\/render\/tab\/config? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/zhihu/zhihu.js, requires-body=true, tag=知乎-首页tabs
+http-response ^https?:\/\/api\.zhihu\.com\/market\/popovers\_v\d{1} script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/zhihu/zhihu.js, requires-body=true, tag=知乎-商城弹窗
+
+
+
+[URL Rewrite]
+^https?:\/\/api\.zhihu\.com\/commercial\_api\/real\_time\_launch\_v\d{1}\? - reject
+^https?:\/\/api\.zhihu\.com\/metrics\/report - reject
+^https?:\/\/m\-cloud\.zhihu\.com\/api\personal\/log\/hit\/target? - reject
+
+[Rule]
+DOMAIN-SUFFIX,duga.zhihu.com, reject
+DOMAIN-SUFFIX,volceapplog.com, reject
+
+[MITM]
+hostname = api.zhihu.com,m-cloud.zhihu.com

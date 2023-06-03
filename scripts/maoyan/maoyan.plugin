@@ -1,0 +1,17 @@
+#!name = 猫眼
+#!icon = https://obj.pipi.cn/festatic/common/image/1bb48d83e5241ff2a1e3e1a0184de793.png
+[Script]
+http-response ^https?:\/strategy\-movie\.maoyan\.com\/api\/olape\/hitexp\.json\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/maoyan/maoyan.js, requires-body=true, tag=猫眼-首页
+
+
+
+
+[URL Rewrite]
+# ^https?:\/\/api\.zhihu\.com\/commercial\_api\/real\_time\_launch\_v\d{1}\? - reject
+
+
+[Rule]
+
+
+[MITM]
+hostname = strategy-movie.maoyan.com,*.maoyan.com
