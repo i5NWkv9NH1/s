@@ -39,6 +39,8 @@ http-response ^https?:\/\/pan\.baidu\.com\/api\/getconfig\? script-path=https://
 ^https?:\/\/pan\.baidu\.com\/api\/analytics\? - reject
 ^https?:\/\/afdconf\.baidu\.com\/afd\/platform\? - reject
 ^https?:\/\/novelapi\.baidu\.com\/novelopenapi\/commmon\/report\? - reject
+^https?:\/\/pan\.baidu\.com\/api\/report\/user? - reject\
+^https?:\/\/update\.baidu\.com\/statistics? - reject
 
 [Rule]
 DOMAIN-SUFFIX,ufosdk.baidu.com,REJECT
