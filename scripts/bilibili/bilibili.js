@@ -16,7 +16,7 @@ switch (url) {
   case url.match(/feed/)?.input: {
     console.log('bilibili:: match feed')
     // prettier-ignore
-    var KEYWORDS = [
+    var keywords = [
       'banner_v5','banner_v8', 'banner', 'cm_v2','large_cover_v6','small_cover_v10', 'cm_double_v9', 'ad_inline_av',  'game', 'small_cover_v9','large_cover_v1','banner','ad_web_s','ad_phone_s','live','bangumi','ad_web_gif', 'ad_ad', 'ad_player', 'ad_phone_s', 'article','vertical_av','static_banner','is_ad_loc'
     ];
     body.data.items = body.data.items.filter((item) => {
