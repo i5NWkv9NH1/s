@@ -1,11 +1,8 @@
 [URL Rewrite]
-^https?:\/\/api\.douban\.com\/v\d{1}\/app_ads\/splash_preload - reject
-^https?:\/\/api\.douban\.com\/v\d{1}\/app_ads\/splash_statistics - reject
-^https?:\/\/qnmob\d{1}\.doubanio\.com\/view\/dale-online\/dale_ad\/* - reject
-
+^https?:\/\/img\d{1}\.douban\.com\/v\d{1}\/app_ads\/splash_preload - reject
+/^https?:\/\/img\d{1}\.doubanio.com\/f\/talion\/(.*)\/pics\/card\/splash\/(.*)/ - reject
 
 [Rule]
-DOMAIN-SUFFIX,harley-t.didapinche.com,REJECT
 
 [MITM]
-hostname = frodo.douban.com,artery.douban.com,amonsul.douban.com,m.douban.com,api.douban.com,qnmob*.doubanio.com
+hostname = img*.doubanio.com
