@@ -1,7 +1,7 @@
 [URL Rewrite]
-^https?:\/\/img\d{1}\.douban\.com\/v\d{1}\/app_ads\/splash_preload - reject
-^https?:\/\/img\d{1}\.doubanio.com\/f\/talion\/(.*)\/pics\/card\/splash\/(.*) - reject
-^https?:\/\/img\d{1}\.doubanio.com\/view\/neo\d{1}\/raw\/public\/(.*) - reject
+^https?:\/\/img\d{1}\.douban\.com\/v\d{1}\/app_ads\/splash_preload - reject-dict
+^https?:\/\/img\d{1}\.doubanio.com\/f\/talion\/(.*)\/pics\/card\/splash\/(.*) - reject-img
+^https?:\/\/img\d{1}\.doubanio.com\/view\/neo\d{1}\/raw\/public\/(.*) - reject-img
 [Rule]
 
 [MITM]
