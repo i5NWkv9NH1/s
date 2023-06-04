@@ -25,6 +25,7 @@ switch (url) {
   }
   case url.match(/frodo\_rexxar/)?.input: {
     body.partial_items = []
+    body.items = []
     break
   }
   default: {

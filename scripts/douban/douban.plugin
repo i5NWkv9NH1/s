@@ -11,8 +11,8 @@ http-response ^https?:\/\/frodo\.douban\.com\api\/(.*) script-path=https://raw.g
 ^https?:\/\/img\d{1}\.douban\.com\/v\d{1}\/app_ads\/splash_preload - reject-dict
 ^https?:\/\/img\d{1}\.doubanio.com\/f\/talion\/(.*)\/pics\/card\/splash\/(.*) - reject-img
 ^https?:\/\/img\d{1}\.doubanio.com\/view\/neo\d{1}\/raw\/public\/(.*) - reject-img
+^https?:\/\/qnmob\d{1}\/.doubanio.com\/view\/dale\-online\/dale\_ad\/public\/(.*) - reject-img
 [Rule]
-DOMAIN-SUFFIX,140.143.177.206, reject
 
 [MITM]
-hostname = img*.doubanio.com,frodo.douban.com
+hostname = img*.doubanio.com,frodo.douban.com,140.143.177.206,49.233.242.15,qnmob*.doubanio.com,81.70.124.99
