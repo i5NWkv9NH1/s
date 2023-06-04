@@ -17,7 +17,7 @@ switch (url) {
     // const tabs = ['全站', '直播']
     const tabs = ['全站']
 
-    body.data.more_sections = body.data.more_sections.filter((item) => {
+    body.more_sections = body.more_sections.filter((item) => {
       //? 存在 tabs
       if (tabs.indexOf(item.title) !== -1) {
         return true
