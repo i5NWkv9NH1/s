@@ -9,8 +9,9 @@ if (!$response.body) $done({})
 let body = JSON.parse($response.body)
 
 /**
- * @match ^https?:\/\/frodo\.douban\.com\.api\/v\d{1}\/elendil\/recommend\_feed?
- * @match ^https?:\/\/frodo\.douban\.com\.api\/v\d{1}\/home\_banner?
+ * @match ^https?:\/\/frodo\.douban\.com\/api\/v\d{1}\/elendil\/recommend\_feed?
+ * @match ^https?:\/\/frodo\.douban\.com\/api\/v\d{1}\/home\_banner?
+ * @match ^https?:\/\/frodo\.douban\.com\/frodo\_rexxar\/api\/routes?
  */
 switch (url) {
   case url.match(/recommend\_feed/)?.input: {
@@ -20,6 +21,11 @@ switch (url) {
   }
   case url.match(/home\_banner/)?.input: {
     body = {}
+    break
+  }
+  case url.match(/frodo\_rexxar/)?.input: {
+    body.partial_items = []
+    break
   }
   default: {
     console.log('douban:: match default')
