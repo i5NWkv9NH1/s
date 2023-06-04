@@ -1,5 +1,5 @@
 #!name = 豆瓣去广告
-#!icon = https://img.icons8.com/?size=512&id=5E24fZ9ORelo&format=png
+#!icon = https://img1.doubanio.com/f/talion/7c6364aadf368dc0210173c940cfd0f64ceddc66/pics/icon/m_logo_200.png
 
 [Script]
 http-response ^https?:\/\/frodo\.douban\.com\.api\/v\d{1}\/elendil\/recommend\_feed? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/douban/douban.js, requires-body=true, binary-body-mode=true, tag=豆瓣-首页去广告
