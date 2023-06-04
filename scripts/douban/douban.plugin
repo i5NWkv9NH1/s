@@ -12,6 +12,7 @@ http-response ^https?:\/\/frodo\.douban\.com\api\/(.*) script-path=https://raw.g
 ^https?:\/\/img\d{1}\.doubanio.com\/f\/talion\/(.*)\/pics\/card\/splash\/(.*) - reject-img
 ^https?:\/\/img\d{1}\.doubanio.com\/view\/neo\d{1}\/raw\/public\/(.*) - reject-img
 [Rule]
+DOMAIN-SUFFIX,140.143.177.206, reject
 
 [MITM]
 hostname = img*.doubanio.com,frodo.douban.com
