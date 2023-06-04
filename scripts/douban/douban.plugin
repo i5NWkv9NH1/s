@@ -15,5 +15,5 @@ http-response ^https?:\/\/frodo\.douban\.com\api\/(.*) script-path=https://raw.g
 [Rule]
 
 [MITM]
-#['81.70.124.99', '140.143.177.206', '49.233.242.15', 'qnmob*.doubanio.com']
-hostname = img*.doubanio.com,frodo.douban.com
+#['81.70.124.99', '140.143.177.206', '49.233.242.15', ]
+hostname = img*.doubanio.com,frodo.douban.com,qnmob*.doubanio.com
