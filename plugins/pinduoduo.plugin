@@ -1,9 +1,15 @@
+#!name = 拼多多
+#!icon = http://www.kuaipng.com/Uploads/pic/w/2020/05-13/80226/water_80226_698_698_.png
 [Script]
-http-response ^https?:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pub.js, requires-body=true, tag=拼多多-tab
-http-response ^https?:\/\/api\.pinduoduo\.com\/api\/cappuccino\/splash\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/splash.js, requires-body=true, tag=拼多多-开屏广告
-http-response ^https?:\/\/api\.pinduoduo\.com\/api\/social\/my\/info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/info.js, requires-body=true, tag=拼多多-信息
-http-response ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/app\_popup\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/popup.js, requires-body=true, tag=拼多多-弹窗
-http-response ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/aquarius.js, requires-body=true, tag=拼多多-弹窗2
+## startingad plugin
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/cappuccino\/splash\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-开屏广告
+
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-主页配置
+
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/social\/my\/info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-我的
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/app\_popup\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-弹窗
+
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-弹窗2
 [URL Rewrite]
 
 [Rule]
@@ -15,6 +21,7 @@ DOMAIN-SUFFIX,lp.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,manortk.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,meta.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,pmmtk.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,pmmtk-a.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,t-dsp.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,ta.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,th-b.pinduoduo.com,REJECT
