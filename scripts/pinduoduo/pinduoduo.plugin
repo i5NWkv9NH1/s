@@ -29,6 +29,7 @@ DOMAIN-SUFFIX,th-a.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,th.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,titan.pinduoduo.com,REJECT
 DOMAIN-SUFFIX,tp.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,apm-a.pinduoduo.com,REJECT
 
 [MITM]
 hostname = api.pinduoduo.com
