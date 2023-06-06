@@ -4,6 +4,10 @@
 ## startingad plugin
 http-response ^https?:\/\/api\.pinduoduo\.com\/api\/cappuccino\/splash\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-开屏广告
 
+
+http-response ^https?:\/\/api\.pinduoduo\.com\/api\/social\/timeline\/v\d{1}\/get\/entrance\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-圈
+
+
 http-response ^https?:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-主页配置
 
 http-response ^https?:\/\/api\.pinduoduo\.com\/api\/social\/my\/info\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinduoduo/pinduoduo.js, requires-body=true, tag=拼多多-我的
