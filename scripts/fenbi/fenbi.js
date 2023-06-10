@@ -9,7 +9,8 @@ if (!$response.body) $done({})
 let body = JSON.parse($response.body)
 
 /**
- * @match ^https?:\/\/keapi\.fenbi\.com\/iphone\/xingce\/small\_banner\?
+ * @match ^https?:\/\/keapi\.fenbi\.com\/app\/(.*)\/small\_banner\?
+ * @match ^https?:\/\/tiku\.fenbi\.com\/(.*)\/banners\/v\d{1}?
  * @match ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show?
  * @match ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/user\_member\/entry\?
  * @match ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/guide\_center\/guides\?
@@ -20,6 +21,11 @@ let body = JSON.parse($response.body)
 switch (url) {
   case url.match(/small\_banner\?/)?.input: {
     body.data.items = []
+    break
+  }
+  case url.match(/banners/)?.input: {
+    body.banners.datas = []
+    body.banners.total = 0
     break
   }
   case url.match(/entrance\/show/)?.input: {
