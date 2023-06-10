@@ -94,13 +94,13 @@ switch (url) {
       '会员周报'
     ]
     body.users = body.users.filter((item) => {
-      if (blocks.indexOf(item.name) === -1) {
+      if (blocks.indexOf(item.name) !== -1) {
         return false
       }
       return item
     })
     body.cover = body.cover.filter((item) => {
-      if (blocks.indexOf(item.name) === -1) {
+      if (blocks.indexOf(item.name) !== -1) {
         return false
       }
       return item
