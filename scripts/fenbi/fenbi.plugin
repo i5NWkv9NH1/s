@@ -19,4 +19,4 @@ http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* - reject
 DOMAIN-SUFFIX,data-api.fenbi.com,REJECT
 DOMAIN-SUFFIX,algo.fenbi.com,REJECT
 [MITM]
-hostname = *.fenbi.com,*.fbstatic.cn,hera-webapp.fenbi.com,marker-api.fenbi.com,keapi.fenbi.com
+hostname = *.fbstatic.cn,hera-webapp.fenbi.com,marker-api.fenbi.com,keapi.fenbi.com,tiku.fenbi.com,*.fenbi.com
