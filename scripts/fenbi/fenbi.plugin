@@ -5,6 +5,8 @@ http-response ^https?:\/\/hera\-webapp\.fenbi\.com\/iphone\/recommend\/tablist? 
 http-response ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/guide\_center\/guides\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-guides
 http-response ^https?:\/\/keapi\.fenbi\.com\/app\/(.*)\/small\_banner\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-small-banner
 http-response ^https?:\/\/tiku\.fenbi\.com\/(.*)\/banners\/v\d{1}? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-banner
+http-response ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/course\/module\/config script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-banner-icon
+
 http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/my\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-my
 http-response ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/user\_member\/entry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-entry
 http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-首页浮动按钮
