@@ -9,19 +9,19 @@ if (!$response.body) $done({})
 let body = JSON.parse($response.body)
 
 /**
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=cginfo\/env\/config
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/coupon\/getMyCouponAll
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/ccgq\/FissionShare
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/coupon\/getCouponByMy
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/ccgq\/tab
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/popups\/HomePopups
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/ccgq\/advConfig&ccgq_uuid\=
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=home\/user\/indexV\d{3}
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=task\/newbie\/config
- * @match ^https?:\/\/cc\.lzjoy\.com\/?urlparam\=common\/user\/GetVip
- * @match ^https?:\/\/cc.lzjoy.com\/?urlparam\=common\/vip\/(.*)
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=user\/vip\/GetUserFissionInfo
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/?urlparam\=pay\/pay\/GetGoodsPayInfo
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=cginfo\/env\/config
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/coupon\/getMyCouponAll
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/ccgq\/FissionShare
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/coupon\/getCouponByMy
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/ccgq\/tab
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/popups\/HomePopups
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/ccgq\/advConfig&ccgq_uuid\=
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/user\/indexV\d{3}
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=task\/newbie\/config
+ * @match ^https?:\/\/cc\.lzjoy\.com\/\?urlparam\=common\/user\/GetVip
+ * @match ^https?:\/\/cc.lzjoy.com\/\?urlparam\=common\/vip\/(.*)
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=user\/vip\/GetUserFissionInfo
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=pay\/pay\/GetGoodsPayInfo
  */
 console.log('虫虫钢琴:: starting match')
 switch (url) {
