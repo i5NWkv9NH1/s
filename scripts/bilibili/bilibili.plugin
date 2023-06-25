@@ -4,6 +4,7 @@
 [Script]
 http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js, requires-body=true, binary-body-mode=true, tag=bili-proto
 http-response ^https://app\.bilibili\.com\/x\/v\d{1}\/feed\/index\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/bilibili.js, requires-body=true, tag=Bilibili-首页去广告
+http-response ^https?:\/\/ap(p|i)\.bilibili\.com\/x\/v\d{1}\/search\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/bilibili/bilibili.js, requires-body=true, tag=Bilibili-搜素去广告
 # ～ BiliBili_哔哩哔哩_1080P高码率+4K画质(番剧和影视除外)@ddgksf2013
 http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,requires-body=true, tag=BiliBili_哔哩哔哩_1080P高码率+4K画质
 # ～ BiliBili_哔哩哔哩_热搜发现@ddgksf2013
