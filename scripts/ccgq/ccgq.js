@@ -22,7 +22,7 @@ let body = JSON.parse($response.body)
  * @match ^https?:\/\/cc.lzjoy.com\/\?urlparam\=common\/vip\/(.*)
  * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=user\/vip\/GetUserFissionInfo
  * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=pay\/pay\/GetGoodsPayInfo
- * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=ipad\/detail\/operninfov002
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=pad\/detail\/operninfov002
  */
 console.log('虫虫钢琴:: starting match')
 switch (url) {
@@ -76,6 +76,10 @@ switch (url) {
     body.datas.price = ''
     body.datas.popups_state = 0
     body.datas.time = ''
+    break
+  }
+  case url.match(/urlparam\=home\/ccgq\/tab/)?.input: {
+    body.datas = body.datas.filter((item) => item.container_type !== 'banner')
     break
   }
   // case url.match(/urlparam\=home\/ccgq\/tab/)?.input: {
@@ -145,11 +149,107 @@ switch (url) {
   }
 
   case url.match(/urlparam\=home\/user\/indexV\d{3}/)?.input: {
-    body.datas.userinfo.is_svip_forever = '1'
-    body.datas.userinfo.vip_create = '1686403545'
-    body.datas.userinfo.vip_expire_time = '1718025996'
-    body.datas.userinfo.is_vip = '1'
-    body.datas.userinfo.is_buy_vip = '1'
+    body.datas.userinfo = {
+      id: '14330478',
+      is_yinyueren: '0',
+      total_shortvideo_num: '0',
+      total_collect_num: '0',
+      is_svip_forever: '0',
+      total_fans_num: '1',
+      vip_will_expire: '0',
+      province: '',
+      third_party_wxnickname: '',
+      has_old_photo: 1,
+      third_party_wbportrait: '',
+      username: '',
+      pad_equity:
+        'https://s201.lzjoy.com/res/statics/fileupload/1fc33dd14a842ae2b59f62272ff48305.jpg',
+      vip_create: '2023-06-25 21:38:15',
+      total_like_num: '0',
+      is_phone: '1',
+      platform: 'web-ccgq',
+      third_party_googleuid: null,
+      total_collect_singer_num: '0',
+      addtime: '2023-05-05 18:53:28',
+      user_photo:
+        'https://s201.lzjoy.com/res/statics/fileupload/normal/202305/299881e783836aaa30e46b57d0c7e095.png?1e99e9d5ea00306a9733c4f136f99fbbb6a59824&x-oss-process=image/resize,h_300,m_lfit&x-oss-process=image/resize,h_300,m_lfit',
+      vip_expire_time: '2099-06-26 21:38:15',
+      user_phone: '15697544152',
+      area: '',
+      status: '1',
+      cg_uid: '14330478',
+      old_password: '',
+      today_is_sign: false,
+      ysuid: '0',
+      is_email: '0',
+      album: {
+        not_original_made_num: '0',
+        collect_total: '0',
+        original_made_num: '0',
+        total: '0',
+        made_total: '0'
+      },
+      third_party_qqportrait: '',
+      third_party_facebookuid: null,
+      old_salt: '',
+      perform: '0',
+      checktime: '0000-01-01 00:00:00',
+      signature: '',
+      home_photo: '',
+      total_comment_num: '1',
+      openid: null,
+      total_fans_num_plus: '0',
+      visit: {
+        be_visited_num: 0,
+        be_visited_num_plus: '0',
+        unread: 0
+      },
+      save_money_by_vip: '0',
+      eqid: '',
+      chong_age: '0年',
+      third_party_wxportrait: '',
+      total_follow_num: '0',
+      channel: 'default',
+      svip_create: '',
+      email: '',
+      is_black: '0',
+      personal_profile: '',
+      third_party_qq_unionid: '',
+      phone_area_code: '',
+      is_svip_five: '0',
+      head_portrait_image:
+        'https://s201.lzjoy.com/res/statics/fileupload/normal/202305/299881e783836aaa30e46b57d0c7e095.png?1e99e9d5ea00306a9733c4f136f99fbbb6a59824&x-oss-process=image/resize,h_300,m_lfit&x-oss-process=image/resize,h_300,m_lfit',
+      birthday: null,
+      third_party_wbuid: '',
+      is_vip: '2',
+      third_party_wbnickname: '',
+      total_collect_album_num: '1',
+      old_username: '',
+      is_followed_by: '0',
+      uid: '14330478',
+      total_opern_num: '0',
+      third_party_wxuid: '',
+      level: '1',
+      total_orbit_num: '0',
+      nickname: '156****4152',
+      version: '',
+      third_party_wx_unionid: '',
+      gender: '0',
+      total_collect_by_num: '0',
+      vip_expire_date: '2023-06-26 21:38:15',
+      is_teacher: '0',
+      city: '',
+      head_portrait_type: '2',
+      firsttime: '0000-01-01 00:00:00',
+      svip_expire_date: '',
+      is_buy_vip: '2',
+      third_party_qqnickname: '',
+      equity:
+        'http://s201.lzjoy.com/res/statics/fileupload/75f9f0680c5da9bab9f849c7d76e411a.png',
+      third_party_qquid: '',
+      register_type: '1',
+      third_party_wxgzh_openid: ''
+    }
     break
   }
 
@@ -164,17 +264,32 @@ switch (url) {
     break
   }
   case url.match(/urlparam\=common\/user\/GetVip/)?.input: {
-    body.list.vip_name = '至尊vip'
-    body.list.is_vip = '1'
-    body.list.expire_date_1 = '1718025996'
-    body.list.is_lifelong_vip = '1'
-    body.list.is_buy = '1'
-    ;(body.list.vip_num = 2), (body.list.svip_create = '1686403545')
-    body.list.expire_date = '1718025996'
-    body.list.vip_type = '2'
-    body.list.vip_expire_date = '1718025996'
-    body.list.ipad_barcode_buy_vip = ''
-    body.list.ipad_barcode_pay = ''
+    body.list = {
+      vip_expire_date: '2099-06-26 21:38:15',
+      ipad_barcode_pay:
+        'ccpiano://web/site?url=http%3A%2F%2Fcc.lzjoy.com%2Fpublic%2Fweb%2Fwebmobile%2Fvip%2Fccgq_barcode.html&requireRefresh=1&translucentStatusBar=true&requireResult=1&isOpenAutommaticScreen=1',
+      vip_type: '',
+      tuning_url:
+        'ccpiano://web/site?translucentStatusBar=false&url=http%3A%2F%2Fcc.lzjoy.com%2Fpublic%2Fweb%2Ftemperament%2Frelease%2Fh5%2Findex.html%23%2F&requireLogin=1&vtype=ANDROID_GUIDE',
+      vip_will_expire_year: '1',
+      svip_expire_date: '',
+      prevert_download_opern: false,
+      vip_create: '2023-06-25 21:38:15',
+      vip_will_expire: '0',
+      expire_date: '',
+      svip_create: '',
+      vip_num: 1,
+      is_buy: '1',
+      is_lifelong_vip: '0',
+      ipad_barcode_buy_vip:
+        'ccpiano://web/site?url=http%3A%2F%2Fcc.lzjoy.com%2Fpublic%2Fweb%2Fwebmobile%2Fvip%2Fccgq_barcode_vip.html&requireRefresh=1&translucentStatusBar=true&requireResult=1&isOpenAutommaticScreen=1',
+      expire_date_1: '',
+      apple_pay_amount: '',
+      apple_pay_amount_list: '',
+      vip_name: '',
+      user_balance: '0',
+      is_vip: '2'
+    }
     break
   }
 
@@ -188,18 +303,19 @@ switch (url) {
     break
   }
 
-  case url.match(/urlparam\=home\/ccgq\/GetUserFissionInfo/)?.input: {
+  case url.match(/urlparam\=pay\/pay\/GetGoodsPayInfo/)?.input: {
     body.datas.vip = {
-      price: 0,
-      vip_id: 0
+      price: 488,
+      vip_id: 2001043
     }
     body.datas.list = []
     break
   }
 
-  case url.match(/urlparam\=ipad\/detail\/operninfov002/)?.input: {
-    body.list.lifelong_vip_price = '1'
-    body.list.has_buy = '1'
+  case url.match(/urlparam\=pad\/detail\/operninfov002/)?.input: {
+    // body.list.lifelong_vip_price = '1'
+    // body.list.has_buy = '1'
+    console.log('pad/detail/operninfov002')
     break
   }
 

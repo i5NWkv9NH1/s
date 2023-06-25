@@ -5,6 +5,7 @@
 http-response ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=cginfo\/env\/config\&ccgq_uuid\= script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-配置
 http-response ^https?:\/\/cc\.lzjoy\.com\/\?urlparam\=common\/user\/GetVip script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-vip.GetVip
 http-response ^https?:\/\/cc.lzjoy.com\/\?urlparam\=common\/vip\/(.*) script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-vip.VipAny
+http-response ^https?:\/\/cc.lzjoy.com\/\?urlparam\=pad\/detail\/operninfov002 script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-vip.detail
 http-response ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/user\/indexV\d{3} script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-vip.user/indexV
 http-response ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=user\/vip\/GetUserFissionInfo script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-vip.GetUserFissionInfo
 http-response ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=home\/ccgq\/tab script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/ccgq/ccgq.js, requires-body=true, tag=虫虫钢琴-首页配置
