@@ -22,6 +22,7 @@ let body = JSON.parse($response.body)
  * @match ^https?:\/\/cc.lzjoy.com\/\?urlparam\=common\/vip\/(.*)
  * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=user\/vip\/GetUserFissionInfo
  * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=pay\/pay\/GetGoodsPayInfo
+ * @match ^https?:\/\/gangqinpu\.lzjoy\.com\/\?urlparam\=ipad\/detail\/operninfov002
  */
 console.log('虫虫钢琴:: starting match')
 switch (url) {
@@ -77,45 +78,45 @@ switch (url) {
     body.datas.time = ''
     break
   }
-  case url.match(/urlparam\=home\/ccgq\/tab/)?.input: {
-    body.tab_list = [
-      { id: '1', name: '分类' },
-      { id: '2', name: '精选' },
-      { id: '10001', name: '伴奏' },
-      { id: '10', name: '教材' },
-      { id: '5', name: 'ACG' }
-    ]
-    // remove banner, nav
-    body.datas.splice(0, 2)
+  // case url.match(/urlparam\=home\/ccgq\/tab/)?.input: {
+  //   body.tab_list = [
+  //     { id: '1', name: '分类' },
+  //     { id: '2', name: '精选' },
+  //     { id: '10001', name: '伴奏' },
+  //     { id: '10', name: '教材' },
+  //     { id: '5', name: 'ACG' }
+  //   ]
+  //   // remove banner, nav
+  //   body.datas.splice(0, 2)
 
-    const blocks = [
-      '推荐音乐人',
-      '初学C调｜满足你的演奏欲',
-      '四手联弹｜快乐成双',
-      '弹唱｜干净｜清脆｜自由',
-      '热门音乐人',
-      '学钢琴｜练技法',
-      '首发专区',
-      '原创推荐',
-      '新人｜新风格｜新想法',
-      '学霸请留步！',
-      '最热视频UP主',
-      '话题广场'
-    ]
+  //   const blocks = [
+  //     '推荐音乐人',
+  //     '初学C调｜满足你的演奏欲',
+  //     '四手联弹｜快乐成双',
+  //     '弹唱｜干净｜清脆｜自由',
+  //     '热门音乐人',
+  //     '学钢琴｜练技法',
+  //     '首发专区',
+  //     '原创推荐',
+  //     '新人｜新风格｜新想法',
+  //     '学霸请留步！',
+  //     '最热视频UP主',
+  //     '话题广场'
+  //   ]
 
-    for (let i in blocks) {
-      var index = body.datas.findIndex((item) => {
-        if (item.data.length === 1) {
-          return item.data[0].title.includes(blocks[i])
-        }
-      })
+  //   for (let i in blocks) {
+  //     var index = body.datas.findIndex((item) => {
+  //       if (item.data.length === 1) {
+  //         return item.data[0].title.includes(blocks[i])
+  //       }
+  //     })
 
-      //? remove title and items
-      body.datas.splice(index, 2)
-    }
+  //     //? remove title and items
+  //     body.datas.splice(index, 2)
+  //   }
 
-    break
-  }
+  //   break
+  // }
 
   case url.match(/urlparam\=home\/popups\/HomePopups/)?.input: {
     body.datas.suspension_list = {
@@ -193,6 +194,12 @@ switch (url) {
       vip_id: 0
     }
     body.datas.list = []
+    break
+  }
+
+  case url.match(/urlparam\=ipad\/detail\/operninfov002/)?.input: {
+    body.list.lifelong_vip_price = '1'
+    body.list.has_buy = '1'
     break
   }
 
