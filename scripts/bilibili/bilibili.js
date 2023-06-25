@@ -15,11 +15,17 @@ let body = JSON.parse($response.body)
 console.log('bilibili:: starting match')
 switch (url) {
   case url.match(/feed/)?.input: {
-    const params = new URL(url)
-    const device = params.searchParams.get('device')
-    const deviceName = params.searchParams('device_name')
-    const mobiApp = params.searchParams('mobi_app')
-
+  const params = url
+                .split('&')
+                .map(p => p.split('='))
+                .reduce((obj, pair) => {
+  const [key, value] = pair.map(decodeURIComponent);
+  obj[key] = value;
+    return obj;
+  }, {});
+    const device = params.device
+    const deviceName = params.device_name
+    const mobiApp = params.mobi_app
     const isPad =
       device.includes('pad') ||
       deviceName.includes('pad') ||
