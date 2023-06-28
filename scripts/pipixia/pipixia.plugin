@@ -1,0 +1,29 @@
+# 应用名称：皮皮虾我们走
+# 下载地址：http://t.cn/Air8PM5k
+# 脚本作者：@Liquor030, @ddgksf2013
+# 微信账号：墨鱼手记
+# 解锁说明：去广告+去水印
+# 更新时间：2023-05-25
+# 通知频道：https://t.me/ddgksf2021
+# 贡献投稿：https://t.me/ddgksf2013_bot
+# 问题反馈：ddgksf2013@163.com
+# 特别提醒：如需转载请注明出处，谢谢合作！
+# 重写地址：https://gist.githubusercontent.com/ddgksf2013/bb1dadbd32f67c68772caebcc70b0a33/raw/pipixia.adblock.js
+# 特别说明：⚠️⚠️⚠️
+          本脚本仅供学习交流使用，禁止转载售卖
+          ⚠️⚠️⚠️
+
+#!name=皮皮虾净化
+#!icon=https://lf3-cdn2-tos.bytegoofy.com/ppx/mp/static/media/dark.19b695a7.svg
+
+
+[Script]
+# > 皮皮虾_去水印@ddgksf2013
+http-response ^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list) script-path = https://gist.githubusercontent.com/ddgksf2013/bb1dadbd32f67c68772caebcc70b0a33/raw/pipixia.adblock.js, requires-body = true, tag = 皮皮虾_去水印
+
+[Rewrite]
+# 去广告
+app_name=super&([\S]*)aid=\d+ 307 app_name=super_pro&$1aid=1412
+
+[MITM]
+hostname = *.pipix.com

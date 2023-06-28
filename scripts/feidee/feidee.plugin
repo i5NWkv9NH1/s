@@ -1,0 +1,42 @@
+# ==UserScript==
+# @ScriptName        随手记净化+VIP[墨鱼版]
+# @Author            @ddgksf2013
+# @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
+# @WechatID          公众号墨鱼手记
+# @TgChannel         https://t.me/ddgksf2021
+# @Contribute        https://t.me/ddgksf2013_bot
+# @Feedback          📮 ddgksf2013@163.com 📮
+# @UpdateTime        2023-03-15
+# @Suitable          自行观看“# > ”注释内容
+# @Attention         如需引用请注明出处，谢谢合作！
+# @Version           V1.0.5
+# @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/SuiShouJi.conf
+# ==/UserScript==
+
+#!name=随手记
+#!icon=https://res.sui.com/img/common/logo-s-v12.png?1
+
+[Script]
+http-response https?:\/\/userapi\.feidee\.net\/v\d{1}\/profile\/basic_info script-path=https://raw.githubusercontent.com/ddgksf2013/MoYu/master/suishouji.js, requires-body=true, tag=随手记_会员信息
+http-response https?:\/\/yun\.feidee\.net\/cab\-vip\-ws\/terminal\/v\d{1}\/vip\-users\/show\-info script-path=https://raw.githubusercontent.com/ddgksf2013/MoYu/master/suishouji.js, requires-body=true, tag=随手记_状态信息
+
+[URL Rewrite]
+# > 随手记_开屏广告
+https://tg.feidee.com/online_ad/api/search.do - reject
+# > 随手记_广告推送
+https://tg.feidee.com/vis-ad-engine-ws/api/show - reject
+# > 随手记_社区
+https://api.feidee.net/v1/configs/client/configs - reject-200
+# > 随手记_首页推荐
+https://yunmk.feidee.net/cab-market-ws/market/v2/contents - reject-dict
+# > 随手记_社区推广
+https://community.feidee.com/api/v1/home/top - reject-200
+# > 随手记_账本中间推广
+https://yun.feidee.net/cab-query-ws/v1/comet/vtable/score-card - reject-dict
+# > 随手记_推广Tips
+https://moneymarket.ssjlicai.com/finance-common-operation-ws/api/actShelve/v1/actShelveShowTipInfo - reject
+# > 随手记_账本顶部推广
+https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-result - reject-dict
+
+[MITM]
+hostname = *.feidee.*, *.ssjlicai.*
