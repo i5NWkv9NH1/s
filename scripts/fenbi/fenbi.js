@@ -11,13 +11,15 @@ let body = JSON.parse($response.body)
 /**
  * @match ^https?:\/\/keapi\.fenbi\.com\/app\/(.*)\/small\_banner\?
  * @match ^https?:\/\/tiku\.fenbi\.com\/(.*)\/banners\/v\d{1}?
- * @match ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show?
- * @match ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/user\_member\/entry\?
- * @match ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/guide\_center\/guides\?
- * @match ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/my\?
- * @match ^https?:\/\/hera\-webapp\.fenbi\.com\/iphone\/recommend\/tablist?
- * @match ^https?:\/\/tiku\.fenbi\.com\/iphone\/xingce\/banners\/v\d{1}?
+ * @match ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/entrance\/show?
+ * @match ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/user\_member\/entry\?
+ * @match ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/guide\_center\/guides\?
+ * @match ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/vertical\_feed\/live\?
+ * @match ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/my\?
+ * @match ^https?:\/\/hera\-webapp\.fenbi\.com\/[\W\w]+\/recommend\/tablist?
+ * @match ^https?:\/\/tiku\.fenbi\.com\/[\W\w]+\/xingce\/banners\/v\d{1}?
  * @match ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/course\/module\/config
+ * @match ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/launcher\/v\d{1}\?
  */
 switch (url) {
   case url.match(/small\_banner\?/)?.input: {
@@ -106,6 +108,16 @@ switch (url) {
       return item
     })
 
+    break
+  }
+
+  case url.match(/launcher\/v\d{1}/)?.input: {
+    body.datas = []
+    break
+  }
+
+  case url.match(/vertical\_feed\/live/)?.input: {
+    body.data.hasLiveFeed = false
     break
   }
 }
