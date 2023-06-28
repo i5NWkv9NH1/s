@@ -9,12 +9,13 @@ http-response ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/course\/module\/conf
 http-response ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/[\W\w]+\/home\/icon script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔教师-banner-icon
 http-response ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/sheet\/combination\/list\/type\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔教师-课表
 http-response ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/reciteBook\/v\d{1}\/list\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔教师-背诵表
+http-response ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/group\/enter\/configuration\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔教师-浮动按钮
 # http-response ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/vertical\_feed\/live\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-直播按钮
 
 
-http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/my\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-my
-http-response ^https?:\/\/ke\.fenbi\.com\/iphone\/v\d{1}\/user\_member\/entry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-entry
-http-response ^https?:\/\/market\-api\.fenbi\.com\/iphone\/v\d{1}\/assistant\/entrance\/show? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-首页浮动按钮
+http-response ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/my\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-my
+http-response ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/user\_member\/entry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-entry
+http-response ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/entrance\/show? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-首页浮动按钮
 http-response ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/launcher\/v\d{1}\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-开屏广告
 
 [URL Rewrite]
@@ -22,9 +23,9 @@ http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* - reject
 ^https?:\/\/tiku\.fenbi\.com\/[\W\w]+\/[\W\w]+\/versions\?- reject
 ^https?:\/\/keapi\.fenbi\.com\/push\/[\W\w]+\/devices\/report? - reject
 ^https?:\/\/[\W\w]+\.fenbi\.com\/dns\_checking - reject
-^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]\/activity\/newUserPopup\/icon\? - reject
-^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]\/[\W\w]\/[\W\w]\/popup\? - reject
-^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]\/[\W\w]\/popup\/callback? - reject
+^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]+\/activity\/newUserPopup\/icon\? - reject
+^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]+\/[\W\w]+\/[\W\w]+\/popup\? - reject
+^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]+\/[\W\w]+\/popup\/callback? - reject
 
 [Rule]
 DOMAIN-SUFFIX,data-api.fenbi.com,REJECT

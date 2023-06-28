@@ -22,6 +22,7 @@ let body = JSON.parse($response.body)
  * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/[\W\w]+\/home\/icon
  * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/sheet\/combination\/list\/type\?
  * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/reciteBook\/v\d{1}\/list\?
+ * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/group\/enter\/configuration\?
  * @match ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/launcher\/v\d{1}\?
  */
 switch (url) {
@@ -73,6 +74,7 @@ switch (url) {
   }
 
   case url.match(/course\/module\/config/)?.input: {
+    //#region
     const blocks = [
       '剩余批改',
       '我的体系课',
@@ -98,6 +100,7 @@ switch (url) {
       '精品答题指导',
       '会员周报'
     ]
+    //#endregion
     body.users = body.users.filter((item) => {
       if (blocks.indexOf(item.name) !== -1) {
         return false
@@ -149,13 +152,13 @@ switch (url) {
       '思维导图'
     ]
     //#endregion
-    body.data.users = body.users.filter((item) => {
+    body.data.users = body.data.users.filter((item) => {
       if (blocks.indexOf(item.name) !== -1) {
         return false
       }
       return item
     })
-    body.data.cover = body.cover.filter((item) => {
+    body.data.cover = body.data.cover.filter((item) => {
       if (blocks.indexOf(item.name) !== -1) {
         return false
       }
@@ -172,6 +175,12 @@ switch (url) {
 
   case url.match(/reciteBook\/v\d{1}\/list/)?.input: {
     body.data.reciteBookExts = []
+    break
+  }
+
+  case url.match(/group\/enter\/configuration/)?.input: {
+    body.data.onOff = false
+    body.data.title = ''
     break
   }
 
