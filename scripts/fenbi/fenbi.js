@@ -17,8 +17,11 @@ let body = JSON.parse($response.body)
  * @match ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/vertical\_feed\/live\?
  * @match ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/my\?
  * @match ^https?:\/\/hera\-webapp\.fenbi\.com\/[\W\w]+\/recommend\/tablist?
- * @match ^https?:\/\/tiku\.fenbi\.com\/[\W\w]+\/xingce\/banners\/v\d{1}?
+ * @match ^https?:\/\/tiku\.fenbi\.com\/[\W\w]+\/[\W\w]+\/banners\/v\d{1}?
  * @match ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/course\/module\/config
+ * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/[\W\w]+\/home\/icon
+ * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/sheet\/combination\/list\/type\?
+ * @match ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/reciteBook\/v\d{1}\/list\?
  * @match ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/launcher\/v\d{1}\?
  */
 switch (url) {
@@ -108,6 +111,67 @@ switch (url) {
       return item
     })
 
+    break
+  }
+
+  case url.match(/home\/icon/)?.input: {
+    //#region
+    const blocks = [
+      '剩余批改',
+      '我的体系课',
+      '我的1对1',
+      '会员中心',
+      '套卷批改',
+      '新手特训',
+      '精品人工批改',
+      '免费资料',
+      '单题批改',
+      '小模考',
+      '精品课',
+      '冲刺备考群',
+      '精品服务',
+      '每日演练',
+      '线下自习室',
+      'PK',
+      '1对1',
+      '精品班',
+      '精品点评',
+      '精品面试辅导',
+      '精品模考',
+      '精品答题指导',
+      '会员周报',
+      '双人PK大战',
+      '一站到底',
+      '闯关练习',
+      '内部资料',
+      '新手入门',
+      '专向突破',
+      '思维导图'
+    ]
+    //#endregion
+    body.data.users = body.users.filter((item) => {
+      if (blocks.indexOf(item.name) !== -1) {
+        return false
+      }
+      return item
+    })
+    body.data.cover = body.cover.filter((item) => {
+      if (blocks.indexOf(item.name) !== -1) {
+        return false
+      }
+      return item
+    })
+
+    break
+  }
+
+  case url.match(/combination\/list\/type/)?.input: {
+    body.data = []
+    break
+  }
+
+  case url.match(/reciteBook\/v\d{1}\/list/)?.input: {
+    body.data.reciteBookExts = []
     break
   }
 
