@@ -1,0 +1,9 @@
+#!name=Pinterest 去广告
+#!icon=https://img.icons8.com/?size=512&id=63676&format=png
+
+[Script]
+http-response ^https?:\/\/api\.pinterest\.com\/v\d{1}\/pins\/[\W\w]+\/related\/modules\? script-path = https://raw.githubusercontent.com/sorachandesu/s/t/scripts/pinterest/pinterest.js, requires-body = true, tag = Pinterest 去广告
+
+
+[MITM]
+hostname = api.pinterest.com
