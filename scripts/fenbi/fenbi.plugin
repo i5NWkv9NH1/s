@@ -15,8 +15,13 @@ http-response ^https?:\/\/jiaoshi.fenbi.com\/[\W\w]+\/group\/enter\/configuratio
 
 http-response ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/my\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-my
 http-response ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/user\_member\/entry\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-entry
-http-response ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/entrance\/show? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-首页浮动按钮
+http-response ^https?:\/\/market\-api\.fenbi\.com\/[\W\w]+\/v\d{1}\/assistant\/entrance\/show\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-首页浮动按钮
 http-response ^https?:\/\/tiku.fenbi.com\/[\W\w]+\/[\W\w]+\/launcher\/v\d{1}\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, tag=粉笔-开屏广告
+http-response ^https?:\/\/login.fenbi.com\/[\W\w]+\/v\d{1}\/getalitokenByClient\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, timeout=10, tag=粉笔-日志埋点
+http-response ^https?:\/\/ke.fenbi.com\/[\W\w]+\/v\d{1}\/apps/config\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, timeout=10, enabled=false, tag=粉笔-未确定
+http-response ^https?:\/\/hera\-webapp\.fenbi\.com\/[\W\w]+\/v\d{1}\/notification\/explore\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, timeout=10, tag=粉笔-通知
+http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, timeout=10, tag=粉笔-开屏广告
+http-response ^https?:\/\/ke\.fenbi\.com\/[\W\w]+\/v\d{1}\/remind\/instant\? script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/fenbi/fenbi.js, requires-body=true, timeout=10, tag=粉笔-底部栏
 
 [URL Rewrite]
 http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* - reject
@@ -26,9 +31,10 @@ http:\/\/fb\.fbstatic\.cn\/api\/ape-images\/\* - reject
 ^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]+\/activity\/newUserPopup\/icon\? - reject
 ^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]+\/[\W\w]+\/[\W\w]+\/popup\? - reject
 ^https?:\/\/[\W\w]+\.fenbi\.com\/[\W\w]+\/[\W\w]+\/popup\/callback? - reject
+^https?:\/\/119\.29\.29\.98\/d\? - reject
 
 [Rule]
 DOMAIN-SUFFIX,data-api.fenbi.com,REJECT
 DOMAIN-SUFFIX,algo.fenbi.com,REJECT
 [MITM]
-hostname = *.fbstatic.cn,hera-webapp.fenbi.com,marker-api.fenbi.com,keapi.fenbi.com,tiku.fenbi.com,*.fenbi.com
+hostname = *.fbstatic.cn,hera-webapp.fenbi.com,marker-api.fenbi.com,login.fenbi.com,keapi.fenbi.com,tiku.fenbi.com,*.fenbi.com
