@@ -127,3 +127,5 @@ payload:
   - "+.xp.apple.com"
   - "+.gdmf.apple.com"
   - "+.download.maxmind.com"
+  - "+.gdmf.apple.com"
+  - "+.bpapi.apple.com"
