@@ -193,6 +193,110 @@ switch (url) {
     body.data.hasLiveFeed = false
     break
   }
+
+case url.match(/launcher\?/)?.input: {
+    body.data = []
+    break
+  }
+
+  case url.match(/notification\/explore/)?.input : {
+    body.data.followShow = false
+    body.data.showTabIds = []
+    body.data.experienceShow = false
+    body.data.exploreShow = false
+    // showTabIds = [ 3, 5]
+    break
+  }
+
+  case url.match(/apps\/config/)?.input :{
+    body.data.params.patches = {}
+    body.data.params["patch_6.16.89"]=[
+        "mock_enable_blank_input"
+    ]
+    body.data.params["patch_6.16.90"]=[
+        "mock_enable_blank_input"
+    ]
+    body.data.params["patch_6.16.91"]=[
+        "mock_enable_blank_input"
+    ]
+    break
+  }
+
+  case url.match(/getalitokenByClient/)?.input:{
+    body.endPoint = ""
+    body.sensorLogStore = {
+      project: "",
+      store: ""
+    }
+    body.debugLogStore = {
+      project: "",
+      store: ""
+    }
+
+    body.infoLogStore = {
+      project: "",
+      store: ""
+    }
+    body.effectiveTime = 9999999999
+
+    break
+  }
+
+  case url.match(/remind\/instant?/)?.input: {
+    body.datas = []
+    break
+  } case url.match(/launcher\?/)?.input: {
+    body.data = []
+    break
+  }
+
+  case url.match(/notification\/explore/)?.input : {
+    body.data.followShow = false
+    body.data.showTabIds = []
+    body.data.experienceShow = false
+    body.data.exploreShow = false
+    // showTabIds = [ 3, 5]
+    break
+  }
+
+  case url.match(/apps\/config/)?.input :{
+    body.data.params.patches = {}
+    body.data.params["patch_6.16.89"]=[
+        "mock_enable_blank_input"
+    ]
+    body.data.params["patch_6.16.90"]=[
+        "mock_enable_blank_input"
+    ]
+    body.data.params["patch_6.16.91"]=[
+        "mock_enable_blank_input"
+    ]
+    break
+  }
+
+  case url.match(/getalitokenByClient/)?.input:{
+    body.endPoint = ""
+    body.sensorLogStore = {
+      project: "",
+      store: ""
+    }
+    body.debugLogStore = {
+      project: "",
+      store: ""
+    }
+
+    body.infoLogStore = {
+      project: "",
+      store: ""
+    }
+    body.effectiveTime = 9999999999
+
+    break
+  }
+
+  case url.match(/remind\/instant?/)?.input: {
+    body.datas = []
+    break
+  }
 }
 
 $done({ body: JSON.stringify(body) })
