@@ -1,0 +1,5 @@
+[Rule]
+DOMAIN-SUFFIX,qs.baijiayun.com,REJECT
+DOMAIN-SUFFIX,click.baijiayun.com,REJECT
+DOMAIN-SUFFIX,bjy-ios-log.cn-beijing.log.aliyuncs.com,REJECT
+DOMAIN-SUFFIX,datax-api.huatu.com,REJECT
