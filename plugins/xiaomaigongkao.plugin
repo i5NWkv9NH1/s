@@ -1,3 +1,6 @@
+#!name = 小麦公考
+#!icon = https://www.xiaomaigongkao.com/public/web/images/logo.png
+
 [Script]
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/member\/index\_new script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@banner
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/StartPage\/welcome script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@banner2
