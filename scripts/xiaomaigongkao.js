@@ -20,6 +20,19 @@ switch(url) {
     body.data = {}
     break
   }
+  case url.match(/ShenExam\/getLists/)?.input: {
+    body.data.lists = []
+    break
+  }
+  case url.match(/ExameData\/new\_exameList/)?.input: {
+    body.data.paper_list = []
+    break
+  }
+  case url.match(/ExameData\/menu\_title/)?.input: {
+    body.data = {}
+    break
+  }
+
 }
 
 $done({ body: JSON.stringify(body) })
