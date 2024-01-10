@@ -13,7 +13,7 @@ switch(url) {
     body.data.banner = []
     break
   }
-  case url.match(/Member\/ndexHangingWindow/)?.input: {
+  case url.match(/Member\/indexHangingWindow/)?.input: {
     body.data = {}
     break
   }
