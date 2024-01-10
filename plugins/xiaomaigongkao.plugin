@@ -4,7 +4,7 @@
 [Script]
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/member\/index\_new script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@banner
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/StartPage\/welcome script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@banner2
-http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/Member\/ndexHangingWindow script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@弹窗图标
+http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/Member\/indexHangingWindow script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@弹窗图标
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/startPage\/windowAdv script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@弹窗图标2
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/ShenExam\/getLists script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@模考
 http-response ^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/ExameData\/new\_exameList script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/xiaomaigongkao.js, requires-body=true, tag=小麦公考@模考2
