@@ -6,6 +6,7 @@ let body = JSON.parse($response.body)
 switch(url) {
   case url.match(/member\/index\_new/)?.input: {
     body.data.banner = []
+    body.data.index_recommend_course = []
     break
   }
   case url.match(/StartPage\/welcome/)?.input: {
