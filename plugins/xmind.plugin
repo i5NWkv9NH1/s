@@ -1,7 +1,7 @@
 #!name=Xmind
 #!icon=http://www.getfavicon.org/get.pl?url=xmind.app&submitget=get+favicon
 [Script]
-http-response ^https?:\/\/www\.xmind\.net\/\_res\/devices script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js, requires-body=true, tag=Xmind会员
+http-response ^https?:\/\/www\.xmind\.app\/\_res\/devices script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js, requires-body=true, tag=Xmind会员
 
 [URL Rewrite]
 ^https?:\/\www\.xmind\.(app|net)\/_api\/events\? - reject
