@@ -1,0 +1,22 @@
+#!name = 金十数据去广告优化
+#!icon = https://cdn.jin10.com/download_page/app/img/h5_header_logo.0e424633.png
+
+[URL Rewrite]
+^https?:\/\/app\.peopleapp\.com\/Api\/\d{3}\/HomeApi\/getRobotics - reject-dict
+
+[Script]
+http-response ^https?:\/\/cdn\.jin10\.com\/app\/flash\_menu.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/jin10/jin10.js, requires-body=true, tag=金十数据@菜单优化
+http-response ^https?:\/\/cdn\.jin10\.com\/json\/index\/cates.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/jin10/jin10.js, requires-body=true, tag=金十数据@视频优化
+http-response ^https?:\/\/cdn\.jin10\.com\/app\-configs.json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/jin10/jin10.js, requires-body=true, tag=金十数据@APP配置
+http-response ^https?:\/\/tv\-union\.jin10\.com\/tv\/index\/list script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/jin10/jin10.js, requires-body=true, tag=金十数据@直播列表优化
+http-response ^https?:\/\/uc\-api\.jin10\.com\/userinfo script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/jin10/jin10.js, requires-body=true, tag=金十数据@直播列表优化
+http-response ^https?:\/\/flash\-api\.jin10\.com\/get\_flash\_list script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/jin10/jin10.js, requires-body=true, tag=金十数据@列表优化
+
+[Rule]
+IP-CIDR,203.107.1.34/32,REJECT
+DOMAIN-SUFFIX,big-data-statistics.jin10.com,REJECT
+DOMAIN-SUFFIX,jad-api.jin10.com,REJECT
+DOMAIN-SUFFIX,log-agent.jin10.com,REJECT
+
+[MITM]
+hostname = cdn.jin10.com,tv-union.jin10.com,uc-api.jin10.com,flash-api.jin10.com

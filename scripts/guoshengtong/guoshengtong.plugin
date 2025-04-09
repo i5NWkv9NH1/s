@@ -1,0 +1,20 @@
+#!name = 国盛通去广告优化
+#!icon = https://wap.gszq.com/img/gszq.png
+
+[Script]
+http-response ^https?:\/\/[^\/]+\/securities-info\/appcenter\/ui_custom\?.*\btype=home_page\b.*\binfo_channel\b script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@首页优化
+http-response ^https?:\/\/app\.gszq\.com\/securities-info\/promotion\/activity\/banner script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@Banner优化
+http-response ^https?:\/\/app\.gszq\.com\/securities-info\/mall\/fin-recommends script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@理财推荐
+http-response ^https?:\/\/app\.gszq\.com\/securities-info\/fund\/etf\/track\/today\?secu_code=\d+ script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@ETF跟踪
+http-response ^https?:\/\/app\.gszq\.com\/securities-info\/notices script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@公告
+http-response ^https?:\/\/app\.gszq\.com\/securities-info\/promotion\/focus\-map script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@不知道的广告
+http-response ^https?:\/\/app\.gszq\.com\/securities-forwarder\/big\-data2\/found\-recommend\-list script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@基金推广
+
+http-response ^https?:\/\/mall.gszq\.com\/servlet\/json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@基金推广
+
+[Rule]
+DOMAIN-SUFFIX,bonree-data.gszq.com,reject
+DOMAIN-SUFFIX,tjd.gszq.com,reject
+
+[MITM]
+hostname = app.gszq.com,mall.gszq.com
