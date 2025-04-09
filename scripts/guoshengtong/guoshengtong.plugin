@@ -13,8 +13,8 @@ http-response ^https?:\/\/app\.gszq\.com\/securities-forwarder\/big\-data2\/foun
 http-response ^https?:\/\/mall.gszq\.com\/servlet\/json script-path=https://raw.githubusercontent.com/sorachandesu/s/t/scripts/guoshengtong/guoshengtong.js, requires-body=true, tag=国盛通@基金推广
 
 [Rule]
-DOMAIN-SUFFIX,bonree-data.gszq.com,reject
-DOMAIN-SUFFIX,tjd.gszq.com,reject
+DOMAIN-SUFFIX,bonree-data.gszq.com,REJECT
+DOMAIN-SUFFIX,tjd.gszq.com,REJECT
 
 [MITM]
 hostname = app.gszq.com,mall.gszq.com
