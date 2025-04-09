@@ -1,10 +1,15 @@
 const url = $request.url
-if (!$response.body) $done({})
+console.log(url)
+
+if (!$response.body) {
+  $done({})
+}
 
 let body = JSON.parse($response.body)
 
 switch (url) {
   case url.includes('/app/flash_menu.json'): {
+    console.log('/app/flash_menu.json')
     body.flash_menu_check = []
     body.flash_menu = []
     break;
