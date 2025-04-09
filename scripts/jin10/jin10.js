@@ -1,15 +1,32 @@
 const url = $request.url
 
+if (url.includes("flash_newest")) {
+  // 通过正则表达式提取 `var newest = [...]` 中的数据部分
+  body = body.replace(/var newest = (\[.*\]);/, function (match, jsonData) {
+    try {
+      let newestData = JSON.parse(jsonData);
+
+      newestData = newestData.filter(item => {
+        return !(item.data.hasOwnProperty("vip_level") && item.data.vip_level === 1);
+      });
+
+      return `var newest = ${JSON.stringify(newestData)};`;
+    } catch (e) {
+      console.log("处理 JSON 错误: ", e);
+      return match;
+    }
+  });
+}
+
 if (!$response.body) {
   $done({})
 }
 
+
+
 let body = JSON.parse($response.body)
-console.log("⚡ 正在处理 URL:", url)
-console.log("原始数据：", (body))
 
 if (url.includes('/app/flash_menu.json')) {
-  console.log('/app/flash_menu.json')
   body.flash_menu_check = []
   body.flash_menu = []
 } else if (url.includes('/json/index/cates.json')) {
@@ -43,7 +60,7 @@ if (url.includes('/app/flash_menu.json')) {
   body.speech.ios = []
 } else if (url.includes('/tv/index/list')) {
   body.data = []
-} else if (url.includes('/userinfo')) {
+} else if (url.includes('/userinfo') || url.includes('?action=myInfo')) {
   body.data.vip_level = 1
   body.data.vip_str = "尊享会员"
   body.data.vip_expiration = "2026-04-09"
@@ -63,5 +80,6 @@ if (url.includes('/app/flash_menu.json')) {
   const whitelist = ['flash', 'market', 'calendar']
   body = body.filter(item => whitelist.includes(item.name))
 }
+
 
 $done({ body: JSON.stringify(body) })
