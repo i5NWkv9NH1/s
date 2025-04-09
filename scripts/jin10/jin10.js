@@ -6,7 +6,7 @@ if (!$response.body) {
 
 let body = JSON.parse($response.body)
 console.log("⚡ 正在处理 URL:", url)
-console.log("原始数据：", JSON.stringify(body))
+console.log("原始数据：", (body))
 
 if (url.includes('/app/flash_menu.json')) {
   console.log('/app/flash_menu.json')
@@ -48,22 +48,17 @@ if (url.includes('/app/flash_menu.json')) {
   body.data.vip_str = "尊享会员"
   body.data.vip_expiration = "2026-04-09"
 } else if (url.includes('/get_flash_list')) {
-  const adKeywordsInContent = ["夜读", "交易的本质"];
-  const adSources = ["某财经机构"];
-  const adTags = ["推广", "广告"];
+  const noIncludeCategories = ['明星企业', '特色栏目'];
 
-  body = body.filter(item => {
-    const d = item.data;
-    const isText = d.content && d.content.trim().length > 0;
-    const isNotVip = d.lock !== true && !(d.remark || []).some(r => r.lock === true);
-    const isNormalType = d.type === 0;
-    const isNotAd = !(
-      adKeywordsInContent.some(k => d.content.includes(k)) ||
-      (d.source && adSources.includes(d.source)) ||
-      (d.tags && d.tags.some(t => adTags.includes(t)))
-    );
-    return isText && isNotVip && isNormalType && isNotAd;
-  });
+  body = body
+    .filter(item => {
+      const d = item.data;
+      // 过滤掉包含在 noIncludeCategories 中的 category_name
+      const isNotInCategory = !noIncludeCategories.includes(d.category_name);
+      // 过滤掉 show_vip_flag 为 1 的项
+      const isNotVip = d.show_vip_flag !== 1;
+      return isNotInCategory && isNotVip;
+    });
 } else if (url.includes('/app_tab_icon')) {
   const whitelist = ['flash', 'market', 'calendar']
   body = body.filter(item => whitelist.includes(item.name))

@@ -2,6 +2,8 @@ const url = $request.url
 if (!$response.body) $done({})
 
 let body = JSON.parse($response.body)
+console.log("⚡ 正在处理 URL:", url)
+console.log("原始数据：", (body))
 
 if (url.includes('/securities-info/appcenter/ui_custom?type=home_page&info_channel')) {
   body.data.custom_items = [] // 清空首页自定义项
